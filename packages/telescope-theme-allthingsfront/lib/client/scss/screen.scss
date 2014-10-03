@@ -1,0 +1,21 @@
+body{
+    background: white;
+}
+
+.header {
+    background-color: transparent;
+    color: #000000;
+}
+
+.header .logo a {
+    color: #1E824C !important;
+}
+
+.header, .content-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.button {
+    background: #1E824C;
+}

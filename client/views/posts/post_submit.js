@@ -64,6 +64,7 @@ Template[getTemplate('post_submit')].events({
 
     var properties = {
       title: $('#title').val(),
+      subtitle: $('#subtitle').val(),
       body: instance.editor.exportFile(),
       sticky: $('#sticky').is(':checked'),
       userId: $('#postUser').val(),
