@@ -28,9 +28,9 @@ viewParameters.category = function (terms) {
 }
 
 // push "categories" modules to postHeading
-postHeading.push({
+postMeta.push({
   template: 'postCategories',
-  order: 3
+  order: 1
 });
   
 // push "categoriesMenu" template to primaryNav

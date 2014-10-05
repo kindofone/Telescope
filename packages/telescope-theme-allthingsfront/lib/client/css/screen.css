@@ -1,3 +1,83 @@
+.post {
+  padding: 15px 0;
+  border-bottom: 1px solid #ECECEC; }
+  .post:last-child {
+    border-bottom: none; }
+
+.post-upvote .upvote-link {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 0;
+  background: #ECECEC;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  position: relative; }
+  .post-upvote .upvote-link.voted {
+    background: #1E824C;
+    color: white; }
+  .post-upvote .upvote-link i {
+    height: 14px; }
+  .post-upvote .upvote-link i, .post-upvote .upvote-link .score {
+    display: block; }
+  .post-upvote .upvote-link .all-center {
+    line-height: 26px; }
+
+.all-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); }
+
+.left-modules, .center-modules, .right-modules {
+  margin-left: -4px;
+  display: inline-block; }
+
+.left-modules, .right-modules {
+  width: 100px; }
+
+.left-modules {
+  margin-left: 0;
+  text-align: center; }
+
+.center-modules {
+  width: 710px; }
+
+.post-heading, .post-excerpt {
+  line-height: 25px; }
+
+.post-title, .post-domain {
+  font-size: 18px;
+  font-weight: book; }
+
+.post-domain {
+  color: #CFCFCF; }
+
+.post-subtitle {
+  font-size: 14px;
+  font-weight: 300; }
+
+.post-meta {
+  font-size: 14px;
+  font-weight: 300;
+  color: #CFCFCF; }
+  .post-meta a {
+    text-decoration: underline;
+    color: inherit;
+    font-weight: inherit; }
+  .post-meta .post-meta-item {
+    display: inline-block; }
+
+a.post-category {
+  font-size: 14px;
+  font-weight: 300;
+  background: #F5F5F5;
+  text-decoration: none;
+  color: #000000;
+  padding: 0 5px;
+  border-radius: 3px; }
+
 body {
   background: white; }
 

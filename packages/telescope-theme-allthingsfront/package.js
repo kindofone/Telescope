@@ -6,7 +6,7 @@ Package.describe({
 
 Package.onUse(function (api) {
 
-  api.use(['telescope-theme-hubble'], ['client']);
+//  api.use(['telescope-theme-hubble'], ['client']);
 
   api.add_files([
     'lib/client/css/screen.css',

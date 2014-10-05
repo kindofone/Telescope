@@ -31,6 +31,7 @@ email@1.0.3
 facebook@1.1.0
 fastclick@1.0.0
 follower-livedata@1.0.1
+font-awesome@0.0.0
 geojson-utils@1.0.0
 handlebars@1.0.0
 html-tools@1.0.1
@@ -109,7 +110,6 @@ telescope-search@0.0.0
 telescope-tags@0.0.0
 telescope-theme-allthingsfront@0.1.0
 telescope-theme-base@0.0.0
-telescope-theme-hubble@0.0.0
 telescope-update-prompt@0.1.0
 templating@1.0.7
 tmeasday:crypto-base@3.1.2

@@ -48,7 +48,6 @@ telescope-rss
 telescope-api
 telescope-module-share
 telescope-theme-base
-telescope-theme-hubble
 telescope-daily
 telescope-newsletter
 telescope-module-embedly
@@ -72,4 +71,5 @@ service-configuration
 accounts-ui
 splendido:accounts-templates-unstyled
 telescope-theme-allthingsfront
+font-awesome
 

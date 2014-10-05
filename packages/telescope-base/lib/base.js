@@ -113,6 +113,10 @@ postModules = [
     position: 'center-center'
   },
   {
+    template: 'postAuthor',
+    position: 'right-right'
+  },
+  {
     template: 'postDiscuss',
     position: 'right-right'
   }
@@ -125,24 +129,31 @@ postHeading = [
   },
   {
     template: 'postDomain', 
-    order: 5
+    order: 2
   }
-]
+];
+
+postExcerpt = [
+  {
+    template: 'postSubtitle',
+    order: 1
+  }
+];
 
 postMeta = [
   {
     template: 'postInfo',
-    order: 1
+    order: 2
   },
-  {
-    template: 'postCommentsLink',
-    order: 3
-  },  
+//  {
+//    template: 'postCommentsLink',
+//    order: 3
+//  },
   {
     template: 'postAdmin', 
     order: 5
   }
-]
+];
 // ------------------------------ Callbacks ------------------------------ //
 
 postSubmitRenderedCallbacks = [];
