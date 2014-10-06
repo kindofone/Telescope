@@ -1,0 +1,38 @@
+.header {
+    padding: 0;
+    max-width: 100%;
+    background: #20211C;
+    color: inherit;
+    height: 70px;
+
+    .nav > li {
+        vertical-align: middle;
+    }
+
+    a, a:link, a:visited {
+        color: inherit;
+
+        &.button {
+            color: white;
+        }
+    }
+
+    .header_inner {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        padding: 15px;
+
+        a {
+            letter-spacing: -2px;
+            font-weight: 300;
+            color: $keyword;
+        }
+    }
+
+    .user-menu {
+        @extend .avatar;
+    }
+}

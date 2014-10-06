@@ -7,5 +7,8 @@ Template[getTemplate('userMenu')].helpers({
   },
   profileUrl: function () {
     return getProfileUrl(Meteor.user());
+  },
+  profileImageUrl: function() {
+    return getAvatarUrl(Meteor.user());
   }
 });

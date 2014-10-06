@@ -1,6 +1,17 @@
+.posts-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    background: transparent;
+}
+
 .post {
     padding: 15px 0;
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid #4f4d42;
+    cursor: pointer;
+
+    &:hover {
+        background: #4f4d42;
+    }
 
     &:last-child {
         border-bottom: none;
@@ -11,27 +22,33 @@
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    border: 0;
-    background: #ECECEC;
+//    background: #ECECEC;
     box-sizing: border-box;
     display: inline-block;
     text-align: center;
     position: relative;
+    border: 1px solid #ECECEC;
+    transition: border-color 150ms, background 150ms;
 
     &.not-voted {
         i {
-            transition: font-size 250ms, transform 250ms;
+            transition: font-size 150ms, transform 150ms;
         }
 
-        &:hover i {
-            font-size: 18px;
-            transform: translateY(-40%);
+        &:hover {
+            border-color: $keyword;
+
+            i {
+                font-size: 18px;
+                transform: translateY(-40%);
+            }
         }
     }
 
     &.voted {
-        background: #1E824C;
+        background: $keyword;
         color: white;
+        border-color: $keyword;
     }
 
     i {
@@ -81,23 +98,25 @@
 }
 
 .post-title, .post-domain {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: book;
 }
 
-.post-domain {
-    color: #CFCFCF;
+a, a:link, a:visited {
+    &.post-title {
+        color: #b4e24a;
+    }
 }
 
 .post-excerpt {
     font-size: 14px;
     font-weight: 300;
+    color: #f9f9f5;
 }
 
 .post-meta {
     font-size: 14px;
     font-weight: 300;
-    color: #CFCFCF;
 
     a {
         text-decoration: underline;
@@ -113,7 +132,7 @@
 a.post-category {
     font-size: 14px;
     font-weight: 300;
-    background: #F5F5F5;
+    background: #f9f9f5;
     text-decoration: none;
     color: #000000;
     padding: 0 5px;
@@ -121,26 +140,13 @@ a.post-category {
 }
 
 .post-author {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 1px solid #ECECEC;
-
-    &:hover {
-        border-color: $green;
-    }
-
-    img {
-        width: 100%;
-    }
+    @extend .avatar;
 }
 
 .post-discuss {
     &:hover {
         a, i {
-            color: $green;
+            color: $keyword;
         }
     }
 

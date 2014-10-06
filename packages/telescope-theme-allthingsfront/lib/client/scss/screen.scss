@@ -1,10 +1,14 @@
 @import "includes/colors";
+@import "global/shared";
 @import "global/links";
+@import "modules/header";
+@import "modules/nav";
 @import "modules/posts";
 
 body {
-    background: white;
+    background: #272822;
     font-family: "museo-sans", sans-serif;
+    color: #888372;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,22 +22,16 @@ h1 {
 
 }
 
-.header {
-    background-color: transparent;
-    color: #000000;
-}
-
-.header .logo a {
-    letter-spacing: -2px;
-    font-weight: 300;
-    color: $green;
-}
-
-.header, .content-wrapper {
-    max-width: 960px;
-    margin: 0 auto;
+.content-wrapper {
+    max-width: 100%;
 }
 
 .button {
-    background: #1E824C;
+    background: $cyan;
+}
+
+.dropdown-no-arrow {
+    & > a:after {
+        content: none !important;
+    }
 }

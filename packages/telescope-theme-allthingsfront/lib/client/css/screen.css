@@ -1,153 +1,5 @@
-/* line 1, ../scss/global/_links.scss */
-a {
-  text-decoration: none;
-}
-/* line 3, ../scss/global/_links.scss */
-a, a:link, a:visited, a:active {
-  color: #000;
-  font-weight: inherit;
-}
-/* line 7, ../scss/global/_links.scss */
-a:hover {
-  color: #1E824C;
-}
-
-/* line 1, ../scss/modules/_posts.scss */
-.post {
-  padding: 15px 0;
-  border-bottom: 1px solid #ECECEC;
-}
-/* line 5, ../scss/modules/_posts.scss */
-.post:last-child {
-  border-bottom: none;
-}
-
-/* line 10, ../scss/modules/_posts.scss */
-.post-upvote .upvote-link {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  border: 0;
-  background: #ECECEC;
-  box-sizing: border-box;
-  display: inline-block;
-  text-align: center;
-  position: relative;
-}
-/* line 22, ../scss/modules/_posts.scss */
-.post-upvote .upvote-link.not-voted i {
-  transition: font-size 250ms, transform 250ms;
-}
-/* line 26, ../scss/modules/_posts.scss */
-.post-upvote .upvote-link.not-voted:hover i {
-  font-size: 18px;
-  transform: translateY(-40%);
-}
-/* line 32, ../scss/modules/_posts.scss */
-.post-upvote .upvote-link.voted {
-  background: #1E824C;
-  color: white;
-}
-/* line 37, ../scss/modules/_posts.scss */
-.post-upvote .upvote-link i {
-  height: 14px;
-}
-/* line 41, ../scss/modules/_posts.scss */
-.post-upvote .upvote-link i, .post-upvote .upvote-link .score {
-  display: block;
-}
-/* line 45, ../scss/modules/_posts.scss */
-.post-upvote .upvote-link .all-center {
-  line-height: 26px;
-}
-
-/* line 50, ../scss/modules/_posts.scss */
-.all-center {
-  position: absolute;
-  top: 50%;
-  left: 52%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-/* line 57, ../scss/modules/_posts.scss */
-.left-modules, .center-modules, .right-modules {
-  margin-left: -4px;
-  display: inline-block;
-}
-
-/* line 62, ../scss/modules/_posts.scss */
-.left-modules, .right-modules {
-  width: 100px;
-}
-
-/* line 66, ../scss/modules/_posts.scss */
-.left-modules {
-  margin-left: 0;
-  text-align: center;
-}
-
-/* line 71, ../scss/modules/_posts.scss */
-.right-modules {
-  text-align: center;
-}
-
-/* line 75, ../scss/modules/_posts.scss */
-.center-modules {
-  width: 710px;
-}
-
-/* line 79, ../scss/modules/_posts.scss */
-.post-heading, .post-excerpt {
-  line-height: 25px;
-}
-
-/* line 83, ../scss/modules/_posts.scss */
-.post-title, .post-domain {
-  font-size: 18px;
-  font-weight: book;
-}
-
-/* line 88, ../scss/modules/_posts.scss */
-.post-domain {
-  color: #CFCFCF;
-}
-
-/* line 92, ../scss/modules/_posts.scss */
-.post-excerpt {
-  font-size: 14px;
-  font-weight: 300;
-}
-
-/* line 97, ../scss/modules/_posts.scss */
-.post-meta {
-  font-size: 14px;
-  font-weight: 300;
-  color: #CFCFCF;
-}
-/* line 102, ../scss/modules/_posts.scss */
-.post-meta a {
-  text-decoration: underline;
-  color: inherit;
-  font-weight: inherit;
-}
-/* line 108, ../scss/modules/_posts.scss */
-.post-meta .post-meta-item {
-  display: inline-block;
-}
-
-/* line 113, ../scss/modules/_posts.scss */
-a.post-category {
-  font-size: 14px;
-  font-weight: 300;
-  background: #F5F5F5;
-  text-decoration: none;
-  color: #000000;
-  padding: 0 5px;
-  border-radius: 3px;
-}
-
-/* line 123, ../scss/modules/_posts.scss */
-.post-author {
+/* line 1, ../scss/global/_shared.scss */
+.avatar, .header .user-menu, .post-author {
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -155,57 +7,257 @@ a.post-category {
   border-radius: 50%;
   border: 1px solid #ECECEC;
 }
-/* line 131, ../scss/modules/_posts.scss */
-.post-author:hover {
-  border-color: #1E824C;
+/* line 9, ../scss/global/_shared.scss */
+.avatar:hover, .header .user-menu:hover, .post-author:hover {
+  border-color: #fa4786;
 }
-/* line 135, ../scss/modules/_posts.scss */
-.post-author img {
+/* line 13, ../scss/global/_shared.scss */
+.avatar img, .header .user-menu img, .post-author img {
   width: 100%;
 }
 
-/* line 142, ../scss/modules/_posts.scss */
-.post-discuss:hover a, .post-discuss:hover i {
-  color: #1E824C;
+/* line 1, ../scss/global/_links.scss */
+a {
+  text-decoration: none;
 }
-/* line 147, ../scss/modules/_posts.scss */
+/* line 3, ../scss/global/_links.scss */
+a, a:link, a:visited, a:active {
+  color: #888372;
+  font-weight: inherit;
+}
+/* line 7, ../scss/global/_links.scss */
+a:hover {
+  color: #fa4786;
+}
+
+/* line 1, ../scss/modules/_header.scss */
+.header {
+  padding: 0;
+  max-width: 100%;
+  background: #20211C;
+  color: inherit;
+  height: 70px;
+}
+/* line 8, ../scss/modules/_header.scss */
+.header .nav > li {
+  vertical-align: middle;
+}
+/* line 12, ../scss/modules/_header.scss */
+.header a, .header a:link, .header a:visited {
+  color: inherit;
+}
+/* line 15, ../scss/modules/_header.scss */
+.header a.button, .header a:link.button, .header a:visited.button {
+  color: white;
+}
+/* line 20, ../scss/modules/_header.scss */
+.header .header_inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 25, ../scss/modules/_header.scss */
+.header .logo {
+  padding: 15px;
+}
+/* line 28, ../scss/modules/_header.scss */
+.header .logo a {
+  letter-spacing: -2px;
+  font-weight: 300;
+  color: #fa4786;
+}
+
+/* line 1, ../scss/modules/_nav.scss */
+.secondary-nav {
+  float: right;
+  padding: 15px;
+  height: 100%;
+}
+
+/* line 1, ../scss/modules/_posts.scss */
+.posts-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+/* line 7, ../scss/modules/_posts.scss */
+.post {
+  padding: 15px 0;
+  border-bottom: 1px solid #4f4d42;
+  cursor: pointer;
+}
+/* line 12, ../scss/modules/_posts.scss */
+.post:hover {
+  background: #4f4d42;
+}
+/* line 16, ../scss/modules/_posts.scss */
+.post:last-child {
+  border-bottom: none;
+}
+
+/* line 21, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  border: 1px solid #ECECEC;
+  transition: border-color 150ms, background 150ms;
+}
+/* line 34, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link.not-voted i {
+  transition: font-size 150ms, transform 150ms;
+}
+/* line 38, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link.not-voted:hover {
+  border-color: #fa4786;
+}
+/* line 41, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link.not-voted:hover i {
+  font-size: 18px;
+  transform: translateY(-40%);
+}
+/* line 48, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link.voted {
+  background: #fa4786;
+  color: white;
+  border-color: #fa4786;
+}
+/* line 54, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link i {
+  height: 14px;
+}
+/* line 58, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link i, .post-upvote .upvote-link .score {
+  display: block;
+}
+/* line 62, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link .all-center {
+  line-height: 26px;
+}
+
+/* line 67, ../scss/modules/_posts.scss */
+.all-center {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* line 74, ../scss/modules/_posts.scss */
+.left-modules, .center-modules, .right-modules {
+  margin-left: -4px;
+  display: inline-block;
+}
+
+/* line 79, ../scss/modules/_posts.scss */
+.left-modules, .right-modules {
+  width: 100px;
+}
+
+/* line 83, ../scss/modules/_posts.scss */
+.left-modules {
+  margin-left: 0;
+  text-align: center;
+}
+
+/* line 88, ../scss/modules/_posts.scss */
+.right-modules {
+  text-align: center;
+}
+
+/* line 92, ../scss/modules/_posts.scss */
+.center-modules {
+  width: 710px;
+}
+
+/* line 96, ../scss/modules/_posts.scss */
+.post-heading, .post-excerpt {
+  line-height: 25px;
+}
+
+/* line 100, ../scss/modules/_posts.scss */
+.post-title, .post-domain {
+  font-size: 22px;
+  font-weight: book;
+}
+
+/* line 106, ../scss/modules/_posts.scss */
+a.post-title, a:link.post-title, a:visited.post-title {
+  color: #b4e24a;
+}
+
+/* line 111, ../scss/modules/_posts.scss */
+.post-excerpt {
+  font-size: 14px;
+  font-weight: 300;
+  color: #f9f9f5;
+}
+
+/* line 117, ../scss/modules/_posts.scss */
+.post-meta {
+  font-size: 14px;
+  font-weight: 300;
+}
+/* line 121, ../scss/modules/_posts.scss */
+.post-meta a {
+  text-decoration: underline;
+  color: inherit;
+  font-weight: inherit;
+}
+/* line 127, ../scss/modules/_posts.scss */
+.post-meta .post-meta-item {
+  display: inline-block;
+}
+
+/* line 132, ../scss/modules/_posts.scss */
+a.post-category {
+  font-size: 14px;
+  font-weight: 300;
+  background: #f9f9f5;
+  text-decoration: none;
+  color: #000000;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+/* line 148, ../scss/modules/_posts.scss */
+.post-discuss:hover a, .post-discuss:hover i {
+  color: #fa4786;
+}
+/* line 153, ../scss/modules/_posts.scss */
 .post-discuss a, .post-discuss i {
   color: #CFCFCF;
   font-weight: 200;
 }
 
-/* line 5, ../scss/screen.scss */
+/* line 8, ../scss/screen.scss */
 body {
-  background: white;
+  background: #272822;
   font-family: "museo-sans", sans-serif;
+  color: #888372;
 }
 
-/* line 11, ../scss/screen.scss */
+/* line 15, ../scss/screen.scss */
 h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
   font-family: "futura-pt", sans-serif;
   font-weight: 400;
 }
 
-/* line 21, ../scss/screen.scss */
-.header {
-  background-color: transparent;
-  color: #000000;
+/* line 25, ../scss/screen.scss */
+.content-wrapper {
+  max-width: 100%;
 }
 
-/* line 26, ../scss/screen.scss */
-.header .logo a {
-  letter-spacing: -2px;
-  font-weight: 300;
-  color: #1E824C;
-}
-
-/* line 32, ../scss/screen.scss */
-.header, .content-wrapper {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-/* line 37, ../scss/screen.scss */
+/* line 29, ../scss/screen.scss */
 .button {
-  background: #1E824C;
+  background: #2aa198;
+}
+
+/* line 34, ../scss/screen.scss */
+.dropdown-no-arrow > a:after {
+  content: none !important;
 }

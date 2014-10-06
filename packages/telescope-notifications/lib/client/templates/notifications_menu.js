@@ -10,10 +10,14 @@ Template[getTemplate('notificationsMenu')].helpers({
   },
   notification_count: function(){
     var notifications=Notifications.find({userId: Meteor.userId(), read: false}).fetch();
+    return notifications.length;
+  },
+  notification_count_formatted: function(){
+    var notifications=Notifications.find({userId: Meteor.userId(), read: false}).fetch();
     if(notifications.length==0){
       return i18n.t('No notifications');
     }else if(notifications.length==1){
-      return i18n.t('1 notification');
+      return i18n.t('1');
     }else{
       return notifications.length+' '+i18n.t('notifications');
     }

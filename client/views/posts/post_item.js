@@ -9,6 +9,24 @@ Template[getTemplate('post_item')].created = function () {
   post = this.data;
 };
 
+Template[getTemplate('post_item')].events({
+    'click .post': function (event) {
+        var target = event.target,
+            isPostClick = true;
+
+        while (target) {
+            if (target.tagName.toLowerCase() == "a") {
+                isPostClick = false;
+            }
+            target = target.parentElement;
+        }
+
+        if (isPostClick) {
+            $(event.currentTarget).find(".discuss-link.go-to-comments").get(0).click();
+        }
+    }
+});
+
 Template[getTemplate('post_item')].helpers({
   leftPostModules: function () {
     return filteredModules('left');
