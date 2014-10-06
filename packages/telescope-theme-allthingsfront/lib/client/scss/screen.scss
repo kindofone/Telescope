@@ -1,7 +1,21 @@
+@import "includes/colors";
+@import "global/links";
 @import "modules/posts";
 
 body {
     background: white;
+    font-family: "museo-sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    * {
+        font-family: "futura-pt", sans-serif;
+        font-weight: 400;
+    }
+}
+
+h1 {
+
 }
 
 .header {
@@ -10,7 +24,9 @@ body {
 }
 
 .header .logo a {
-    color: #1E824C !important;
+    letter-spacing: -2px;
+    font-weight: 300;
+    color: $green;
 }
 
 .header, .content-wrapper {

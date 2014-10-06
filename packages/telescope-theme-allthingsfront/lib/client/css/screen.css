@@ -1,9 +1,28 @@
+/* line 1, ../scss/global/_links.scss */
+a {
+  text-decoration: none;
+}
+/* line 3, ../scss/global/_links.scss */
+a, a:link, a:visited, a:active {
+  color: #000;
+  font-weight: inherit;
+}
+/* line 7, ../scss/global/_links.scss */
+a:hover {
+  color: #1E824C;
+}
+
+/* line 1, ../scss/modules/_posts.scss */
 .post {
   padding: 15px 0;
-  border-bottom: 1px solid #ECECEC; }
-  .post:last-child {
-    border-bottom: none; }
+  border-bottom: 1px solid #ECECEC;
+}
+/* line 5, ../scss/modules/_posts.scss */
+.post:last-child {
+  border-bottom: none;
+}
 
+/* line 10, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link {
   width: 55px;
   height: 55px;
@@ -13,62 +32,110 @@
   box-sizing: border-box;
   display: inline-block;
   text-align: center;
-  position: relative; }
-  .post-upvote .upvote-link.voted {
-    background: #1E824C;
-    color: white; }
-  .post-upvote .upvote-link i {
-    height: 14px; }
-  .post-upvote .upvote-link i, .post-upvote .upvote-link .score {
-    display: block; }
-  .post-upvote .upvote-link .all-center {
-    line-height: 26px; }
+  position: relative;
+}
+/* line 22, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link.not-voted i {
+  transition: font-size 250ms, transform 250ms;
+}
+/* line 26, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link.not-voted:hover i {
+  font-size: 18px;
+  transform: translateY(-40%);
+}
+/* line 32, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link.voted {
+  background: #1E824C;
+  color: white;
+}
+/* line 37, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link i {
+  height: 14px;
+}
+/* line 41, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link i, .post-upvote .upvote-link .score {
+  display: block;
+}
+/* line 45, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link .all-center {
+  line-height: 26px;
+}
 
+/* line 50, ../scss/modules/_posts.scss */
 .all-center {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%); }
+  left: 52%;
+  transform: translateX(-50%) translateY(-50%);
+}
 
+/* line 57, ../scss/modules/_posts.scss */
 .left-modules, .center-modules, .right-modules {
   margin-left: -4px;
-  display: inline-block; }
+  display: inline-block;
+}
 
+/* line 62, ../scss/modules/_posts.scss */
 .left-modules, .right-modules {
-  width: 100px; }
+  width: 100px;
+}
 
+/* line 66, ../scss/modules/_posts.scss */
 .left-modules {
   margin-left: 0;
-  text-align: center; }
+  text-align: center;
+}
 
+/* line 71, ../scss/modules/_posts.scss */
+.right-modules {
+  text-align: center;
+}
+
+/* line 75, ../scss/modules/_posts.scss */
 .center-modules {
-  width: 710px; }
+  width: 710px;
+}
 
+/* line 79, ../scss/modules/_posts.scss */
 .post-heading, .post-excerpt {
-  line-height: 25px; }
+  line-height: 25px;
+}
 
+/* line 83, ../scss/modules/_posts.scss */
 .post-title, .post-domain {
   font-size: 18px;
-  font-weight: book; }
+  font-weight: book;
+}
 
+/* line 88, ../scss/modules/_posts.scss */
 .post-domain {
-  color: #CFCFCF; }
+  color: #CFCFCF;
+}
 
-.post-subtitle {
+/* line 92, ../scss/modules/_posts.scss */
+.post-excerpt {
   font-size: 14px;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
+/* line 97, ../scss/modules/_posts.scss */
 .post-meta {
   font-size: 14px;
   font-weight: 300;
-  color: #CFCFCF; }
-  .post-meta a {
-    text-decoration: underline;
-    color: inherit;
-    font-weight: inherit; }
-  .post-meta .post-meta-item {
-    display: inline-block; }
+  color: #CFCFCF;
+}
+/* line 102, ../scss/modules/_posts.scss */
+.post-meta a {
+  text-decoration: underline;
+  color: inherit;
+  font-weight: inherit;
+}
+/* line 108, ../scss/modules/_posts.scss */
+.post-meta .post-meta-item {
+  display: inline-block;
+}
 
+/* line 113, ../scss/modules/_posts.scss */
 a.post-category {
   font-size: 14px;
   font-weight: 300;
@@ -76,23 +143,69 @@ a.post-category {
   text-decoration: none;
   color: #000000;
   padding: 0 5px;
-  border-radius: 3px; }
+  border-radius: 3px;
+}
 
+/* line 123, ../scss/modules/_posts.scss */
+.post-author {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #ECECEC;
+}
+/* line 131, ../scss/modules/_posts.scss */
+.post-author:hover {
+  border-color: #1E824C;
+}
+/* line 135, ../scss/modules/_posts.scss */
+.post-author img {
+  width: 100%;
+}
+
+/* line 142, ../scss/modules/_posts.scss */
+.post-discuss:hover a, .post-discuss:hover i {
+  color: #1E824C;
+}
+/* line 147, ../scss/modules/_posts.scss */
+.post-discuss a, .post-discuss i {
+  color: #CFCFCF;
+  font-weight: 200;
+}
+
+/* line 5, ../scss/screen.scss */
 body {
-  background: white; }
+  background: white;
+  font-family: "museo-sans", sans-serif;
+}
 
+/* line 11, ../scss/screen.scss */
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+}
+
+/* line 21, ../scss/screen.scss */
 .header {
   background-color: transparent;
-  color: #000000; }
+  color: #000000;
+}
 
+/* line 26, ../scss/screen.scss */
 .header .logo a {
-  color: #1E824C !important; }
+  letter-spacing: -2px;
+  font-weight: 300;
+  color: #1E824C;
+}
 
+/* line 32, ../scss/screen.scss */
 .header, .content-wrapper {
   max-width: 960px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
+/* line 37, ../scss/screen.scss */
 .button {
-  background: #1E824C; }
-
-/*# sourceMappingURL=screen.css.map */
+  background: #1E824C;
+}

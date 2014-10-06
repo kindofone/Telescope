@@ -135,7 +135,7 @@ postHeading = [
 
 postExcerpt = [
   {
-    template: 'postSubtitle',
+    template: 'postExcerpt',
     order: 1
   }
 ];

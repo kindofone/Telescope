@@ -18,6 +18,17 @@
     text-align: center;
     position: relative;
 
+    &.not-voted {
+        i {
+            transition: font-size 250ms, transform 250ms;
+        }
+
+        &:hover i {
+            font-size: 18px;
+            transform: translateY(-40%);
+        }
+    }
+
     &.voted {
         background: #1E824C;
         color: white;
@@ -39,7 +50,7 @@
 .all-center {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 52%;
     transform: translateX(-50%) translateY(-50%);
 }
 
@@ -54,6 +65,10 @@
 
 .left-modules {
     margin-left: 0;
+    text-align: center;
+}
+
+.right-modules {
     text-align: center;
 }
 
@@ -74,7 +89,7 @@
     color: #CFCFCF;
 }
 
-.post-subtitle {
+.post-excerpt {
     font-size: 14px;
     font-weight: 300;
 }
@@ -103,4 +118,34 @@ a.post-category {
     color: #000000;
     padding: 0 5px;
     border-radius: 3px;
+}
+
+.post-author {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #ECECEC;
+
+    &:hover {
+        border-color: $green;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.post-discuss {
+    &:hover {
+        a, i {
+            color: $green;
+        }
+    }
+
+    a, i {
+        color: #CFCFCF;
+        font-weight: 200;
+    }
 }

@@ -15,9 +15,9 @@ postSchemaObject = {
     type: String,
     label: "Title"
   },
-  subtitle: {
+  excerpt: {
     type: String,
-    label: "Subitle"
+    label: "Excerpt"
   },
   url: {
     type: String,
@@ -111,7 +111,7 @@ Posts.deny({
     if(isAdminById(userId))
       return false;
     // deny the update if it contains something other than the following fields
-    return (_.without(fieldNames, 'title', 'subtitle', 'url', 'body', 'shortUrl', 'shortTitle', 'categories').length > 0);
+    return (_.without(fieldNames, 'title', 'excerpt', 'url', 'body', 'shortUrl', 'shortTitle', 'categories').length > 0);
   }
 });
 
@@ -128,7 +128,7 @@ getPostProperties = function(post) {
   var p = {
     postAuthorName : getDisplayName(postAuthor),
     postTitle : cleanUp(post.title),
-    postSubtitle : cleanUp(post.subtitle),
+    postExcerpt : cleanUp(post.excerpt),
     profileUrl: getProfileUrlById(post.userId),
     postUrl: getPostPageUrl(post),
     thumbnailUrl: post.thumbnailUrl,
@@ -173,7 +173,7 @@ Posts.before.update(function (userId, doc, fieldNames, modifier, options) {
 Meteor.methods({
   post: function(post){
     var title = cleanUp(post.title),
-        subtitle = cleanUp(post.subtitle),
+        excerpt = cleanUp(post.excerpt),
         body = post.body,
         userId = this.userId,
         user = Meteor.users.findOne(userId),
@@ -194,9 +194,9 @@ Meteor.methods({
     if(!post.title)
       throw new Meteor.Error(602, i18n.t('Please fill in a title'));
 
-    // check that user provided a subtitle
-    if(!post.subtitle)
-      throw new Meteor.Error(602, i18n.t('Please fill in a subtitle'));
+    // check that user provided an excerpt
+    if(!post.excerpt)
+      throw new Meteor.Error(602, i18n.t('Please fill in an excerpt'));
 
 
     if(!!post.url){
@@ -225,7 +225,7 @@ Meteor.methods({
     // Basic Properties
     properties = {
       title: title,
-      subtitle: subtitle,
+      excerpt: excerpt,
       body: body,
       userId: userId,
       author: getDisplayNameById(userId),
