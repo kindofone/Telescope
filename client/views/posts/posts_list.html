@@ -1,6 +1,7 @@
 <template name="posts_list">
   {{> UI.dynamic template=postsListIncoming data=incoming}}
   <div class="posts-wrapper grid grid-module">
+    <!--{{> UI.dynamic template=search}}-->
     <div class="posts list">
       {{#each posts}}
         {{> UI.dynamic template=post_item}}

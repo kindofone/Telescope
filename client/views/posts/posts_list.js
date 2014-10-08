@@ -1,4 +1,5 @@
 Template[getTemplate('posts_list')].helpers({
+
   post_item: function () {
     return getTemplate('post_item');
   },
@@ -17,6 +18,9 @@ Template[getTemplate('posts_list')].helpers({
   },
   postsListIncoming: function () {
     return getTemplate('postsListIncoming');
+  },
+  search: function () {
+    return getTemplate('search');
   }
 });
 

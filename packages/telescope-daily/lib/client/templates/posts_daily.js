@@ -40,6 +40,9 @@ Meteor.startup(function () {
     loadMoreUrl: function () {
       var count = parseInt(Session.get('postsDays')) + daysPerPage;
       return '/daily/' + count;
+    },
+    hasMorePosts: function() {
+      return parseInt(Session.get('postsLimit')) == this.postsCount;
     }
   });
 

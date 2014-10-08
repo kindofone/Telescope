@@ -22,6 +22,75 @@ h1 {
 
 }
 
+input {
+    font-family: "museo-sans", sans-serif;
+}
+
+.search {
+    display: block;
+    margin: 10px 0;
+    float: right;
+    position: relative;
+
+    input#search {
+        margin: 0;
+        display: inline-block;
+        vertical-align: top;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-apperance: none;
+        appearance: none;
+        background: rgba(79, 77, 66, 0.2);
+        border-radius: 3px;
+        border: none;
+        font-size: 14px;
+        font-weight: 300;
+        opacity: 0;
+        width: 200px;
+        height: 35px;
+        padding: 0 35px 0 5px;
+        pointer-events: none;
+        transition: opacity 250ms;
+    }
+
+    i {
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 32px;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        z-index: 10;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: transform 250ms;
+
+        &#search_hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &.show {
+        input#search {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        #search_show {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #search_hide {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
+
 .content-wrapper {
     max-width: 100%;
 }

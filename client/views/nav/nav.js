@@ -70,3 +70,16 @@ Template[getTemplate('nav')].events({
     }
   }
 });
+
+Template[getTemplate('search')].events({
+    'click i#search_show': function (e) {
+        $(".search").addClass("show");
+        $(".search input").focus();
+    },
+
+    'click i#search_hide': function (e) {
+        $(".search").removeClass("show");
+        Session.set('searchQuery', "");
+        Router.go('/');
+    }
+});
