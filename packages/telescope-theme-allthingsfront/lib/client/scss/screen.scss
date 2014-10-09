@@ -92,7 +92,7 @@ input {
 }
 
 .content-wrapper {
-    max-width: 100%;
+    max-width: 960px;
 }
 
 .button {
@@ -103,4 +103,8 @@ input {
     & > a:after {
         content: none !important;
     }
+}
+
+.grid-module, .at-form {
+    background: transparent;
 }

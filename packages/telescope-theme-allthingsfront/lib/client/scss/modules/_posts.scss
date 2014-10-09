@@ -81,6 +81,22 @@
     width: calc(100% - 200px);
 }
 
+.single-post {
+    .post {
+        cursor: auto;
+
+        &:hover {
+            background: transparent;
+        }
+        .post-body {
+            font-size: 18px;
+        }
+    }
+    .left-modules, .center-modules, .right-modules {
+        vertical-align: top;
+    }
+}
+
 .post-heading, .post-excerpt {
     line-height: 25px;
 }
@@ -88,6 +104,13 @@
 .post-title, .post-domain {
     font-size: 22px;
     font-weight: book;
+}
+
+.post-body {
+    font-size: 15px;
+    font-weight: 200;
+    width: 100%;
+    color: #f9f9f5;
 }
 
 a, a:link, a:visited {
