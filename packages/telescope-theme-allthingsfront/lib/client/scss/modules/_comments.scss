@@ -1,0 +1,21 @@
+.comment-new, .comment-list {
+    width: calc(100% - 200px);
+    margin: 0 auto;
+}
+
+.comment-list {
+    .comment {
+        .comment-main {
+            display: inline-block;
+            padding-left: 15px;
+        }
+
+        .comment-user-info {
+            display: inline-block;
+        }
+
+        .user-avatar {
+            @extend .avatar;
+        }
+    }
+}

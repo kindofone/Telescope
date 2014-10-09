@@ -5,34 +5,36 @@
         <div class="comment-deleted">This comment has been deleted.</div>
       {{else}}
       <div class="comment-content">
-        <div class="comment-actions {{#if upvoted}}upvoted{{else}}not-upvoted{{/if}} {{#if downvoted}}downvoted{{else}}not-downvoted{{/if}}">
-          <a class="upvote" href="#">
-            <i class="icon-up"></i>
-            <span>{{i18n "upvote"}}</span>
-          </a>
-          <a class="downvote" href="#">
-            <i class="icon-down"></i>
-            <span>{{i18n "downvote"}}</span>
-          </a>
+        <div class="comment-user-info">
+            <div class="user-avatar">{{>avatar userId=userId class=""}}</div>
+            <div class="comment-actions {{#if upvoted}}upvoted{{else}}not-upvoted{{/if}} {{#if downvoted}}downvoted{{else}}not-downvoted{{/if}}">
+              <a class="upvote" href="#">
+                <i class="fa fa-chevron-up"></i>
+              </a>
+              <a class="downvote" href="#">
+                <i class="fa fa-chevron-down"></i>
+              </a>
+            </div>
         </div>
-        <div class="user-avatar">{{>avatar userId=userId class=""}}</div>
         <div class="comment-main">
           <div class="comment-meta">
-            <a class="comment-username" href="{{profileUrl}}">{{authorName}}</a>
-            <span class="comment-time">{{ago}},</span>
-            <span class="points">{{upvotes}}</span> <span class="unit">points </span>
-            <a href="/comments/{{_id}}" class="comment-permalink icon-link goto-comment">{{i18n "link"}}</a>
-            {{#if can_edit}}
-              | <a class="edit-link" href="/comments/{{_id}}/edit">{{i18n "Edit"}}</a>
-            {{/if}}
-            {{#if currentUser.isAdmin}}
-              | <span>{{full_date}}</span>
-            {{/if}}
+            <a class="comment-username" href="{{profileUrl}}">{{authorName}}</a>&nbsp;
+            <span class="comment-text markdown">{{{htmlBody}}}</span>
+
+            <div>
+              <span class="points">{{upvotes}} {{i18n "points"}}</span>
+              • <span class="comment-time"><a href="/comments/{{_id}}" class="comment-permalink icon-link goto-comment">{{ago}}</a></span>
+              {{#if can_edit}}
+                • <a class="edit-link" href="/comments/{{_id}}/edit">{{i18n "Edit"}}</a>
+              {{/if}}
+              {{#if getSetting "nestedComments" true}}
+                • <a href="/comments/{{_id}}" class="comment-reply goto-comment">{{i18n "Reply"}}</a>
+              {{/if}}
+              {{#if currentUser.isAdmin}}
+                • <span>{{full_date}}</span>
+              {{/if}}
+            </div>
           </div>
-          <div class="comment-text markdown">{{{htmlBody}}}</div>
-          {{#if getSetting "nestedComments" true}}
-            <a href="/comments/{{_id}}" class="comment-reply goto-comment">{{i18n "Reply"}}</a>
-          {{/if}}
         </div>
       </div>
       {{/if}}

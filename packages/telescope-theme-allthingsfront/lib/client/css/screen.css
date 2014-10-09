@@ -1,5 +1,5 @@
 /* line 1, ../scss/global/_shared.scss */
-.avatar, .header .user-menu, .post-author {
+.avatar, .header .user-menu, .post-author, .comment-list .comment .user-avatar {
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -8,11 +8,11 @@
   border: 1px solid #ECECEC;
 }
 /* line 9, ../scss/global/_shared.scss */
-.avatar:hover, .header .user-menu:hover, .post-author:hover {
+.avatar:hover, .header .user-menu:hover, .post-author:hover, .comment-list .comment .user-avatar:hover {
   border-color: #fa4786;
 }
 /* line 13, ../scss/global/_shared.scss */
-.avatar img, .header .user-menu img, .post-author img {
+.avatar img, .header .user-menu img, .post-author img, .comment-list .comment .user-avatar img {
   width: 100%;
 }
 
@@ -283,32 +283,48 @@ a.post-category {
   font-weight: 200;
 }
 
-/* line 8, ../scss/screen.scss */
+/* line 1, ../scss/modules/_comments.scss */
+.comment-new, .comment-list {
+  width: calc(100% - 200px);
+  margin: 0 auto;
+}
+
+/* line 8, ../scss/modules/_comments.scss */
+.comment-list .comment .comment-main {
+  display: inline-block;
+  padding-left: 15px;
+}
+/* line 13, ../scss/modules/_comments.scss */
+.comment-list .comment .comment-user-info {
+  display: inline-block;
+}
+
+/* line 9, ../scss/screen.scss */
 body {
   background: #272822;
   font-family: "museo-sans", sans-serif;
   color: #888372;
 }
 
-/* line 15, ../scss/screen.scss */
+/* line 16, ../scss/screen.scss */
 h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
   font-family: "futura-pt", sans-serif;
   font-weight: 400;
 }
 
-/* line 25, ../scss/screen.scss */
+/* line 26, ../scss/screen.scss */
 input {
   font-family: "museo-sans", sans-serif;
 }
 
-/* line 29, ../scss/screen.scss */
+/* line 30, ../scss/screen.scss */
 .search {
   display: block;
   margin: 10px 0;
   float: right;
   position: relative;
 }
-/* line 35, ../scss/screen.scss */
+/* line 36, ../scss/screen.scss */
 .search input#search {
   margin: 0;
   display: inline-block;
@@ -330,7 +346,7 @@ input {
   pointer-events: none;
   transition: opacity 250ms;
 }
-/* line 57, ../scss/screen.scss */
+/* line 58, ../scss/screen.scss */
 .search i {
   width: 35px;
   height: 35px;
@@ -345,43 +361,43 @@ input {
   top: 0;
   transition: transform 250ms;
 }
-/* line 71, ../scss/screen.scss */
+/* line 72, ../scss/screen.scss */
 .search i#search_hide {
   opacity: 0;
   pointer-events: none;
 }
-/* line 78, ../scss/screen.scss */
+/* line 79, ../scss/screen.scss */
 .search.show input#search {
   pointer-events: auto;
   opacity: 1;
 }
-/* line 83, ../scss/screen.scss */
+/* line 84, ../scss/screen.scss */
 .search.show #search_show {
   opacity: 0;
   pointer-events: none;
 }
-/* line 87, ../scss/screen.scss */
+/* line 88, ../scss/screen.scss */
 .search.show #search_hide {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 94, ../scss/screen.scss */
+/* line 95, ../scss/screen.scss */
 .content-wrapper {
   max-width: 960px;
 }
 
-/* line 98, ../scss/screen.scss */
+/* line 99, ../scss/screen.scss */
 .button {
   background: #2aa198;
 }
 
-/* line 103, ../scss/screen.scss */
+/* line 104, ../scss/screen.scss */
 .dropdown-no-arrow > a:after {
   content: none !important;
 }
 
-/* line 108, ../scss/screen.scss */
+/* line 109, ../scss/screen.scss */
 .grid-module, .at-form {
   background: transparent;
 }
