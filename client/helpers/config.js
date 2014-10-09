@@ -7,12 +7,13 @@ EpicEditorOptions={
 	basePath:   '/editor',
 	clientSideStorage: false,
 	autogrow: {
-		minHeight: 100
-	},
+        minHeight: false
+    },
+    button: false,
 	theme: {
 		base:'/themes/base/epiceditor.css',
 		preview:'/themes/preview/github.css',
-		editor:'/themes/editor/epic-light3.css'
+		editor:'/themes/editor/epic-dark.css'
 	}
 };
 

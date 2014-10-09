@@ -3,8 +3,22 @@
     margin: 0 auto;
 }
 
+.comment-text {
+    color: #f9f9f5;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+a.comment-username {
+    color: $keyword;
+}
+
 .comment-list {
     .comment {
+        margin: 0;
+        padding: 15px 0;
+        border-top: 1px solid #4f4d42;
+
         .comment-main {
             display: inline-block;
             padding-left: 15px;
@@ -17,5 +31,30 @@
         .user-avatar {
             @extend .avatar;
         }
+    }
+}
+
+.comment-new {
+    padding: 15px 0;
+    border-top: 1px solid #4f4d42;
+
+    .comment-user-info {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .comment-form {
+        display: inline-block;
+        padding-left: 15px;
+        width: calc(100% - 32px - 15px);
+
+        #editor > iframe {
+            border: none;
+            border-radius: 3px;
+        }
+    }
+
+    .user-avatar {
+        @extend .avatar;
     }
 }

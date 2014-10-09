@@ -1,15 +1,20 @@
 <template name="postAdmin">
+  {{#if can_edit}}
+  <div class="post-meta-item">
+    • <a href="/posts/{{_id}}/edit" class="edit-link goto-edit">Edit</a>
+  </div>
+  {{/if}}
   {{#if currentUser.isAdmin}}
     <div class="post-meta-item">
       {{#if postsMustBeApproved}}
-        |
+        •
         {{#if isApproved}}
           <a href="#" class="unapprove-link goto-edit">Unapprove</a>
         {{else}}
           <a href="#" class="approve-link goto-edit">Approve</a>
         {{/if}}
       {{/if}}
-      | {{i18n "score"}}: {{shortScore}}, {{i18n "clicks"}}: {{clicks}}
+      • {{i18n "Score"}}: {{shortScore}} • {{i18n "Clicks"}}: {{clicks}}
     </div>
   {{/if}}
 </template>

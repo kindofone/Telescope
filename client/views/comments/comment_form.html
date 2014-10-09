@@ -1,14 +1,19 @@
 <template name="comment_form">
   {{#if canComment}}
     <div class="comment-new module">
-      <form>
-        <div class="comment-field" id="editor">
-          <textarea id="comment" rows="3" autofocus="autofocus"></textarea>
-        </div>
-        <div class="comment-submit">
-          <input type="submit" class="button" value="{{i18n "Add Comment"}}" title="(⌘+enter)" />
-        </div>
-      </form>
+      <div class="comment-user-info">
+        <div class="user-avatar">{{>avatar userId=userId class=""}}</div>
+      </div>
+      <div class="comment-form">
+        <form>
+          <div class="comment-field" id="editor">
+            <textarea id="comment" rows="3" autofocus="autofocus"></textarea>
+          </div>
+          <div class="comment-submit">
+            <input type="submit" class="button" value="{{i18n "Add Comment"}}" title="(⌘+enter)" />
+          </div>
+        </form>
+      </div>
     </div>
   {{/if}}  
 </template>

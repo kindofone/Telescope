@@ -143,7 +143,7 @@ postExcerpt = [
 postMeta = [
   {
     template: 'postInfo',
-    order: 2
+    order: 1
   },
 //  {
 //    template: 'postCommentsLink',

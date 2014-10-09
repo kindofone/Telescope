@@ -1,7 +1,6 @@
 <template name="postInfo">
   <div class="post-meta-item">
-    {{#if can_edit}}
-      | <a href="/posts/{{_id}}/edit" class="edit-link goto-edit">Edit</a>
-    {{/if}}
+      {{i18n "Posted on"}}&nbsp;{{formatDate date "MMMM Do, YYYY"}}
   </div>
+  •
 </template>

@@ -33,8 +33,23 @@ Template[getTemplate('post_submit')].rendered = function(){
 
   Session.set('currentPostStatus', STATUS_APPROVED);
   Session.set('selectedPostId', null);
-  if(!this.editor && $('#editor').exists())
-    this.editor= new EpicEditor(EpicEditorOptions).load();
+  if(!this.editor && $('#editor').exists()) {
+      this.editor = new EpicEditor(EpicEditorOptions);
+      this.editor.on('load', function () {
+           // Step 1: Grab the editor element
+           var editorDoc = this.editor.getElement('editor');
+
+           // Step 2: Create the script tag
+           var script = editorDoc.createElement('script');
+           script.type = 'text/javascript';
+           script.innerHTML = "(function() {var config = {kitId: 'ktr5mwg'}; var d = false; var tk = document.createElement('script'); tk.src = '//use.typekit.net/' + config.kitId + '.js'; tk.type = 'text/javascript'; tk.async = 'true'; tk.onload = tk.onreadystatechange = function() {var rs = this.readyState; if (d || rs && rs != 'complete' && rs != 'loaded') return; d = true; try { Typekit.load(config); } catch (e) {} }; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tk, s); })();";
+
+           // Step 3: Add it to the editor's <head>
+           var editorHead = editorDoc.getElementsByTagName('head')[0];
+           editorHead.appendChild(script);
+      }.bind(this));
+      this.editor.load();
+  }
 
   $('#postedAtDate').datepicker();
 

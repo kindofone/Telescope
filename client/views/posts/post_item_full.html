@@ -17,12 +17,12 @@
               {{> UI.dynamic template=getTemplate data=..}}
             {{/each}}
           </h3>
-          {{> UI.dynamic template=post_body}}
           <div class="post-meta">
             {{#each postMeta}}
               {{> UI.dynamic template=getTemplate data=..}}
             {{/each}}
           </div>
+          {{> UI.dynamic template=post_body}}
         </div>
       </div>
     </div>
