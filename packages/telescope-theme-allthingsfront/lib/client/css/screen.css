@@ -289,50 +289,65 @@ a.post-category {
 }
 
 /* line 6, ../scss/modules/_comments.scss */
+.comment-list.comment-children {
+  width: calc(100% - 32px - 30px);
+  margin-left: calc(32px + 30px);
+}
+/* line 10, ../scss/modules/_comments.scss */
+.comment-list.comment-children .comment {
+  padding-bottom: 0;
+}
+
+/* line 15, ../scss/modules/_comments.scss */
 .comment-text {
   color: #f9f9f5;
   font-weight: 300;
   font-size: 14px;
 }
 
-/* line 12, ../scss/modules/_comments.scss */
+/* line 21, ../scss/modules/_comments.scss */
 a.comment-username {
   color: #fa4786;
 }
 
-/* line 17, ../scss/modules/_comments.scss */
+/* line 26, ../scss/modules/_comments.scss */
 .comment-list .comment {
   margin: 0;
   padding: 15px 0;
   border-top: 1px solid #4f4d42;
 }
-/* line 22, ../scss/modules/_comments.scss */
+/* line 31, ../scss/modules/_comments.scss */
 .comment-list .comment .comment-main {
   display: inline-block;
-  padding-left: 15px;
 }
-/* line 27, ../scss/modules/_comments.scss */
+/* line 35, ../scss/modules/_comments.scss */
 .comment-list .comment .comment-user-info {
   display: inline-block;
+  padding: 0 15px;
+}
+/* line 44, ../scss/modules/_comments.scss */
+.comment-list .comment .comment-content + .comment-children > li {
+  margin-top: 15px;
 }
 
-/* line 37, ../scss/modules/_comments.scss */
+/* line 50, ../scss/modules/_comments.scss */
 .comment-new {
   padding: 15px 0;
   border-top: 1px solid #4f4d42;
 }
-/* line 41, ../scss/modules/_comments.scss */
+/* line 54, ../scss/modules/_comments.scss */
 .comment-new .comment-user-info {
   display: inline-block;
   vertical-align: top;
+  padding: 0 15px;
 }
-/* line 46, ../scss/modules/_comments.scss */
+/* line 60, ../scss/modules/_comments.scss */
 .comment-new .comment-form {
   display: inline-block;
-  padding-left: 15px;
-  width: calc(100% - 32px - 15px);
+  width: calc(100% - 32px - 30px);
+  margin-left: -4px;
 }
-/* line 51, ../scss/modules/_comments.scss */
+/* line 65, ../scss/modules/_comments.scss */
 .comment-new .comment-form #editor > iframe {
   border: none;
   border-radius: 3px;
@@ -439,4 +454,17 @@ input {
 /* line 109, ../scss/screen.scss */
 .grid-module, .at-form {
   background: transparent;
+}
+
+/* line 113, ../scss/screen.scss */
+.footer {
+  color: #888372;
+  font-weight: 300;
+}
+
+/* line 118, ../scss/screen.scss */
+.logo-type {
+  font-family: "futura-pt";
+  font-size: 135%;
+  color: #fa4786;
 }
