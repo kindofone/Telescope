@@ -6,7 +6,7 @@
     border-radius: 50%;
     border: 1px solid #ECECEC;
 
-    &:hover {
+    &:not(img):hover {
         border-color: $keyword;
     }
 

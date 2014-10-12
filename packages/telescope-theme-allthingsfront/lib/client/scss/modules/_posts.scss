@@ -10,9 +10,10 @@
 }
 
 .post {
-    padding: 15px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #4f4d42;
     cursor: pointer;
+    transition: opacity 1s;
 
     &:hover {
         background: rgba(79, 77, 66, 0.2);
@@ -21,11 +22,15 @@
     &:last-child {
         border-bottom: none;
     }
+
+    .modules-group {
+        vertical-align: top;
+    }
 }
 
 .post-upvote .upvote-link {
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: rgba(79, 77, 66, 0.2);
     box-sizing: border-box;
@@ -84,6 +89,7 @@
 .single-post {
     .post {
         cursor: auto;
+        margin-top: 15px;
 
         &:hover {
             background: transparent;
@@ -91,9 +97,6 @@
         .post-body {
             font-size: 18px;
         }
-    }
-    .left-modules, .center-modules, .right-modules {
-        vertical-align: top;
     }
 }
 
@@ -124,8 +127,8 @@ a.post-title:hover {
 }
 
 .post-excerpt {
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 200;
     color: #f9f9f5;
 }
 

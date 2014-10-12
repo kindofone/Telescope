@@ -40,3 +40,7 @@ postMeta = _.sortBy(postMeta, 'order');
 Meteor.startup(function () {
   $('#rss-link').attr('title', i18n.t('New Posts'));
 });
+
+Template.body.rendered = function () {
+  $("body").addClass("rendered");
+};

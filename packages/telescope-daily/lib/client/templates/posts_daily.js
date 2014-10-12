@@ -12,7 +12,7 @@ var getPosts = function (date) {
     return post;
   });
   return posts;
-}
+};
 
 Meteor.startup(function () {
 

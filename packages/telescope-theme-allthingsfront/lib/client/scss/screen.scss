@@ -25,6 +25,17 @@ h1 {
 
 input {
     font-family: "museo-sans", sans-serif;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-apperance: none;
+    appearance: none;
+    background: rgba(79, 77, 66, 0.2);
+    border-radius: 3px;
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: #f9f9f5;
 }
 
 .search {
@@ -33,20 +44,11 @@ input {
     float: right;
     position: relative;
 
-    input#search {
+    .search-field {
+        @extend input;
         margin: 0;
         display: inline-block;
         vertical-align: top;
-        outline: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -ms-apperance: none;
-        appearance: none;
-        background: rgba(79, 77, 66, 0.2);
-        border-radius: 3px;
-        border: none;
-        font-size: 14px;
-        font-weight: 300;
         opacity: 0;
         width: 200px;
         height: 35px;
@@ -117,6 +119,30 @@ input {
 
 .logo-type {
     font-family: "futura-pt";
-    font-size: 135%;
+    font-size: 1.2em;
+    font-weight: 300;
     color: $keyword;
+}
+
+.newsletter-banner.newsletter-banner {
+    width: 100%;
+    border-radius: 3px;
+    background: transparent;
+    border: 1px solid #fa4786;
+
+    .newsletter-tagline {
+        color: #f9f9f5;
+        font-weight: 300;
+    }
+
+    .newsletter-email {
+        @extend input;
+        width: 200px;
+    }
+}
+
+.button, input[type="submit"] {
+    background: #fa4786;
+    font-weight: 300;
+    color: #f9f9f5;
 }
