@@ -1,12 +1,7 @@
 <template name="postUpvote">
   {{#if upvoted}}
-    <span class="upvote-link voted">
-        <span class="all-center">
-            <i class="fa fa-check"></i>
-            <span class="score">{{baseScore}}</span>
-        </span>
-    </span>
+    <a class="upvote-link voted" href="#"><span class="all-center"><i class="fa fa-check"></i><span class="score">{{baseScore}}</span></span></a>
   {{else}}
-    <a class="upvote-link not-voted" href="#"><span class="all-center"><i class="fa fa-chevron-up"></i><span class="score">{{baseScore}}</span></span></a>
+    <a class="upvote-link not-voted" href="#"><span class="all-center"><i class="fa fa-sort-asc"></i><span class="score">{{baseScore}}</span></span></a>
   {{/if}}
 </template>

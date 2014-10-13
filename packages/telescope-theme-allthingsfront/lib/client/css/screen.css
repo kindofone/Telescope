@@ -1,8 +1,8 @@
 /* line 1, ../scss/global/_shared.scss */
 .avatar, .header .user-menu, .post-author, .comment-list .comment .user-avatar, .comment-new .user-avatar {
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   overflow: hidden;
   border-radius: 50%;
   border: 1px solid #ECECEC;
@@ -92,25 +92,28 @@ a:hover {
 
 /* line 12, ../scss/modules/_posts.scss */
 .post {
-  padding: 10px 0;
-  border-bottom: 1px solid #4f4d42;
+  padding: 15px 0;
   cursor: pointer;
-  transition: opacity 1s;
+  transition: opacity 1s, background 100ms;
 }
-/* line 18, ../scss/modules/_posts.scss */
+/* line 17, ../scss/modules/_posts.scss */
 .post:hover {
   background: rgba(79, 77, 66, 0.2);
 }
-/* line 22, ../scss/modules/_posts.scss */
+/* line 20, ../scss/modules/_posts.scss */
+.post:hover .post-author, .post:hover .post-discuss {
+  opacity: 1;
+}
+/* line 25, ../scss/modules/_posts.scss */
 .post:last-child {
   border-bottom: none;
 }
-/* line 26, ../scss/modules/_posts.scss */
+/* line 29, ../scss/modules/_posts.scss */
 .post .modules-group {
   vertical-align: top;
 }
 
-/* line 31, ../scss/modules/_posts.scss */
+/* line 34, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link {
   width: 48px;
   height: 48px;
@@ -120,27 +123,38 @@ a:hover {
   display: inline-block;
   text-align: center;
   position: relative;
-  transition: background 150ms;
+  transition: background 150ms, box-shadow 150ms, color 150ms, font-size 150ms;
+  box-shadow: 0 -1px 0 1px rgba(136, 131, 114, 0.25);
 }
-/* line 42, ../scss/modules/_posts.scss */
+/* line 46, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link.voted {
   color: #fa4786;
-  border: 1px solid #fa4786;
-}
-/* line 47, ../scss/modules/_posts.scss */
-.post-upvote .upvote-link i {
-  height: 14px;
+  box-shadow: none;
+  border: none;
 }
 /* line 51, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link.voted i {
+  font-size: 14px;
+}
+/* line 56, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link.not-voted:hover {
+  box-shadow: 0 -1px 0 1px #fa4786;
+}
+/* line 60, ../scss/modules/_posts.scss */
+.post-upvote .upvote-link i {
+  height: 14px;
+  font-size: 22px;
+}
+/* line 65, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link i, .post-upvote .upvote-link .score {
   display: block;
 }
-/* line 55, ../scss/modules/_posts.scss */
+/* line 69, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link .all-center {
   line-height: 26px;
 }
 
-/* line 60, ../scss/modules/_posts.scss */
+/* line 74, ../scss/modules/_posts.scss */
 .all-center {
   position: absolute;
   top: 50%;
@@ -148,59 +162,59 @@ a:hover {
   transform: translateX(-50%) translateY(-50%);
 }
 
-/* line 67, ../scss/modules/_posts.scss */
+/* line 81, ../scss/modules/_posts.scss */
 .left-modules, .center-modules, .right-modules {
   margin-left: -4px;
   display: inline-block;
 }
 
-/* line 72, ../scss/modules/_posts.scss */
+/* line 86, ../scss/modules/_posts.scss */
 .left-modules, .right-modules {
   width: 100px;
 }
 
-/* line 76, ../scss/modules/_posts.scss */
+/* line 90, ../scss/modules/_posts.scss */
 .left-modules {
   margin-left: 0;
   text-align: center;
 }
 
-/* line 81, ../scss/modules/_posts.scss */
+/* line 95, ../scss/modules/_posts.scss */
 .right-modules {
   text-align: center;
 }
 
-/* line 85, ../scss/modules/_posts.scss */
+/* line 99, ../scss/modules/_posts.scss */
 .center-modules {
   width: calc(100% - 200px);
 }
 
-/* line 90, ../scss/modules/_posts.scss */
+/* line 104, ../scss/modules/_posts.scss */
 .single-post .post {
   cursor: auto;
   margin-top: 15px;
 }
-/* line 94, ../scss/modules/_posts.scss */
+/* line 108, ../scss/modules/_posts.scss */
 .single-post .post:hover {
   background: transparent;
 }
-/* line 97, ../scss/modules/_posts.scss */
+/* line 111, ../scss/modules/_posts.scss */
 .single-post .post .post-body {
   font-size: 18px;
 }
 
-/* line 103, ../scss/modules/_posts.scss */
+/* line 117, ../scss/modules/_posts.scss */
 .post-heading, .post-excerpt {
   line-height: 25px;
 }
 
-/* line 107, ../scss/modules/_posts.scss */
+/* line 121, ../scss/modules/_posts.scss */
 .post-title, .post-domain {
-  font-size: 22px;
-  font-weight: book;
+  font-size: 22px !important;
+  font-weight: 300 !important;
 }
 
-/* line 112, ../scss/modules/_posts.scss */
+/* line 126, ../scss/modules/_posts.scss */
 .post-body {
   font-size: 15px;
   font-weight: 200;
@@ -208,40 +222,40 @@ a:hover {
   color: #f9f9f5;
 }
 
-/* line 120, ../scss/modules/_posts.scss */
+/* line 134, ../scss/modules/_posts.scss */
 a.post-title, a:link.post-title, a:visited.post-title {
   color: #b4e24a;
 }
 
-/* line 125, ../scss/modules/_posts.scss */
+/* line 139, ../scss/modules/_posts.scss */
 a.post-title:hover {
   color: #fa4786;
 }
 
-/* line 129, ../scss/modules/_posts.scss */
+/* line 143, ../scss/modules/_posts.scss */
 .post-excerpt {
   font-size: 16px;
   font-weight: 200;
   color: #f9f9f5;
 }
 
-/* line 135, ../scss/modules/_posts.scss */
+/* line 149, ../scss/modules/_posts.scss */
 .post-meta {
   font-size: 14px;
   font-weight: 300;
 }
-/* line 139, ../scss/modules/_posts.scss */
+/* line 153, ../scss/modules/_posts.scss */
 .post-meta a {
   text-decoration: underline;
   color: inherit;
   font-weight: inherit;
 }
-/* line 145, ../scss/modules/_posts.scss */
+/* line 159, ../scss/modules/_posts.scss */
 .post-meta .post-meta-item {
   display: inline-block;
 }
 
-/* line 150, ../scss/modules/_posts.scss */
+/* line 164, ../scss/modules/_posts.scss */
 a.post-category {
   font-size: 14px;
   font-weight: 300;
@@ -251,34 +265,54 @@ a.post-category {
   border-radius: 3px;
 }
 
-/* line 165, ../scss/modules/_posts.scss */
+/* line 173, ../scss/modules/_posts.scss */
+.post-author, .post-discuss {
+  opacity: 0.5;
+  transition: opacity 150ms;
+}
+
+/* line 184, ../scss/modules/_posts.scss */
 .post-discuss:hover a, .post-discuss:hover i {
   color: #fa4786;
 }
-/* line 170, ../scss/modules/_posts.scss */
+/* line 189, ../scss/modules/_posts.scss */
 .post-discuss a, .post-discuss i {
   color: #CFCFCF;
   font-weight: 200;
 }
 
-/* line 176, ../scss/modules/_posts.scss */
+/* line 195, ../scss/modules/_posts.scss */
 .posts-day-heading {
-  width: 960px;
-  margin: 15px auto;
-  font-size: 18px;
+  max-width: 960px;
+  margin: 25px auto;
   font-weight: 200;
-  text-align: center;
+  text-align: left;
   color: inherit;
+  font-family: "futura-pt";
+  text-transform: uppercase;
+}
+/* line 204, ../scss/modules/_posts.scss */
+.posts-day-heading h2, .posts-day-heading h4 {
+  display: inline-block;
+}
+/* line 208, ../scss/modules/_posts.scss */
+.posts-day-heading h2 {
+  font-size: 22px;
+}
+/* line 211, ../scss/modules/_posts.scss */
+.posts-day-heading h4 {
+  margin-left: 10px;
+  font-size: 14px;
 }
 
-/* line 185, ../scss/modules/_posts.scss */
+/* line 217, ../scss/modules/_posts.scss */
 .more-button {
   width: 960px;
   margin: 0 auto;
   background: transparent;
   text-align: center;
 }
-/* line 191, ../scss/modules/_posts.scss */
+/* line 223, ../scss/modules/_posts.scss */
 .more-button span, .more-button i {
   font-size: 18px;
   font-weight: 200;

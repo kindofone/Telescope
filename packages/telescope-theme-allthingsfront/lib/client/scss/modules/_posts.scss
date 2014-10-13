@@ -10,13 +10,16 @@
 }
 
 .post {
-    padding: 10px 0;
-    border-bottom: 1px solid #4f4d42;
+    padding: 15px 0;
     cursor: pointer;
-    transition: opacity 1s;
+    transition: opacity 1s, background 100ms;
 
     &:hover {
         background: rgba(79, 77, 66, 0.2);
+
+        .post-author, .post-discuss {
+            opacity: 1;
+        }
     }
 
     &:last-child {
@@ -37,15 +40,26 @@
     display: inline-block;
     text-align: center;
     position: relative;
-    transition: background 150ms;
+    transition: background 150ms, box-shadow 150ms, color 150ms, font-size 150ms;
+    box-shadow: 0 -1px 0 1px rgba(136, 131, 114, 0.25);
 
     &.voted {
         color: $keyword;
-        border: 1px solid $keyword;
+        box-shadow: none;
+        border: none;
+
+        i {
+            font-size: 14px;
+        }
+    }
+
+    &.not-voted:hover {
+        box-shadow: 0 -1px 0 1px $keyword;
     }
 
     i {
         height: 14px;
+        font-size: 22px;
     }
 
     i, .score {
@@ -105,8 +119,8 @@
 }
 
 .post-title, .post-domain {
-    font-size: 22px;
-    font-weight: book;
+    font-size: 22px !important;
+    font-weight: 300 !important;
 }
 
 .post-body {
@@ -156,6 +170,11 @@ a.post-category {
     border-radius: 3px;
 }
 
+.post-author, .post-discuss {
+    opacity: 0.5;
+    transition: opacity 150ms;
+}
+
 .post-author {
     @extend .avatar;
 }
@@ -174,12 +193,25 @@ a.post-category {
 }
 
 .posts-day-heading {
-    width: 960px;
-    margin: 15px auto;
-    font-size: 18px;
+    max-width: 960px;
+    margin: 25px auto;
     font-weight: 200;
-    text-align: center;
+    text-align: left;
     color: inherit;
+    font-family: "futura-pt";
+    text-transform: uppercase;
+
+    h2, h4 {
+        display: inline-block;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+    h4 {
+        margin-left: 10px;
+        font-size: 14px;
+    }
 }
 
 .more-button {
