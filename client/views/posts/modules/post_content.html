@@ -1,9 +1,11 @@
 <template name="postContent">
   <div class="post-info">
     <h3 class="post-heading">
-      {{#each postHeading}}
-        {{> UI.dynamic template=getTemplate data=..}}
-      {{/each}}
+      <a href="{{postLink}}" class="post-title-link" target="{{postTarget}}">
+        {{#each postHeading}}
+          {{> UI.dynamic template=getTemplate data=..}}
+        {{/each}}
+      </a>
     </h3>
     <div class="post-excerpt">
       {{#each postExcerpt}}

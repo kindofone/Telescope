@@ -1,4 +1,10 @@
 Template[getTemplate('postContent')].helpers({
+  postLink: function(){
+    return !!this.url ? getOutgoingUrl(this.url) : "/posts/"+this._id;
+  },
+  postTarget: function() {
+    return !!this.url ? '_blank' : '';
+  },
   postHeading: function () {
     return postHeading;
   },

@@ -118,9 +118,21 @@
     line-height: 25px;
 }
 
-.post-title, .post-domain {
+.post-title-link, .post-title, .post-domain {
     font-size: 22px !important;
     font-weight: 300 !important;
+}
+
+.post-title-link:hover .post-title {
+    color: $keyword;
+}
+
+.post-title {
+    color: #b4e24a;
+}
+
+.post-domain {
+    color: #888372;
 }
 
 .post-body {
@@ -128,16 +140,6 @@
     font-weight: 200;
     width: 100%;
     color: #f9f9f5;
-}
-
-a, a:link, a:visited {
-    &.post-title {
-        color: #b4e24a;
-    }
-}
-
-a.post-title:hover {
-    color: $keyword;
 }
 
 .post-excerpt {

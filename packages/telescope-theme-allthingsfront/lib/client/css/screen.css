@@ -209,12 +209,27 @@ a:hover {
 }
 
 /* line 121, ../scss/modules/_posts.scss */
-.post-title, .post-domain {
+.post-title-link, .post-title, .post-domain {
   font-size: 22px !important;
   font-weight: 300 !important;
 }
 
 /* line 126, ../scss/modules/_posts.scss */
+.post-title-link:hover .post-title {
+  color: #fa4786;
+}
+
+/* line 130, ../scss/modules/_posts.scss */
+.post-title {
+  color: #b4e24a;
+}
+
+/* line 134, ../scss/modules/_posts.scss */
+.post-domain {
+  color: #888372;
+}
+
+/* line 138, ../scss/modules/_posts.scss */
 .post-body {
   font-size: 15px;
   font-weight: 200;
@@ -222,40 +237,30 @@ a:hover {
   color: #f9f9f5;
 }
 
-/* line 134, ../scss/modules/_posts.scss */
-a.post-title, a:link.post-title, a:visited.post-title {
-  color: #b4e24a;
-}
-
-/* line 139, ../scss/modules/_posts.scss */
-a.post-title:hover {
-  color: #fa4786;
-}
-
-/* line 143, ../scss/modules/_posts.scss */
+/* line 145, ../scss/modules/_posts.scss */
 .post-excerpt {
   font-size: 16px;
   font-weight: 200;
   color: #f9f9f5;
 }
 
-/* line 149, ../scss/modules/_posts.scss */
+/* line 151, ../scss/modules/_posts.scss */
 .post-meta {
   font-size: 14px;
   font-weight: 300;
 }
-/* line 153, ../scss/modules/_posts.scss */
+/* line 155, ../scss/modules/_posts.scss */
 .post-meta a {
   text-decoration: underline;
   color: inherit;
   font-weight: inherit;
 }
-/* line 159, ../scss/modules/_posts.scss */
+/* line 161, ../scss/modules/_posts.scss */
 .post-meta .post-meta-item {
   display: inline-block;
 }
 
-/* line 164, ../scss/modules/_posts.scss */
+/* line 166, ../scss/modules/_posts.scss */
 a.post-category {
   font-size: 14px;
   font-weight: 300;
@@ -265,23 +270,23 @@ a.post-category {
   border-radius: 3px;
 }
 
-/* line 173, ../scss/modules/_posts.scss */
+/* line 175, ../scss/modules/_posts.scss */
 .post-author, .post-discuss {
   opacity: 0.5;
   transition: opacity 150ms;
 }
 
-/* line 184, ../scss/modules/_posts.scss */
+/* line 186, ../scss/modules/_posts.scss */
 .post-discuss:hover a, .post-discuss:hover i {
   color: #fa4786;
 }
-/* line 189, ../scss/modules/_posts.scss */
+/* line 191, ../scss/modules/_posts.scss */
 .post-discuss a, .post-discuss i {
   color: #CFCFCF;
   font-weight: 200;
 }
 
-/* line 195, ../scss/modules/_posts.scss */
+/* line 197, ../scss/modules/_posts.scss */
 .posts-day-heading {
   max-width: 960px;
   margin: 25px auto;
@@ -291,28 +296,28 @@ a.post-category {
   font-family: "futura-pt";
   text-transform: uppercase;
 }
-/* line 204, ../scss/modules/_posts.scss */
+/* line 206, ../scss/modules/_posts.scss */
 .posts-day-heading h2, .posts-day-heading h4 {
   display: inline-block;
 }
-/* line 208, ../scss/modules/_posts.scss */
+/* line 210, ../scss/modules/_posts.scss */
 .posts-day-heading h2 {
   font-size: 22px;
 }
-/* line 211, ../scss/modules/_posts.scss */
+/* line 213, ../scss/modules/_posts.scss */
 .posts-day-heading h4 {
   margin-left: 10px;
   font-size: 14px;
 }
 
-/* line 217, ../scss/modules/_posts.scss */
+/* line 219, ../scss/modules/_posts.scss */
 .more-button {
   width: 960px;
   margin: 0 auto;
   background: transparent;
   text-align: center;
 }
-/* line 223, ../scss/modules/_posts.scss */
+/* line 225, ../scss/modules/_posts.scss */
 .more-button span, .more-button i {
   font-size: 18px;
   font-weight: 200;
