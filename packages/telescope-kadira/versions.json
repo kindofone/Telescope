@@ -86,11 +86,11 @@
     ],
     [
       "meteorhacks:kadira",
-      "2.9.2"
+      "2.11.2"
     ],
     [
       "meteorhacks:kadira-binary-deps",
-      "1.0.1"
+      "1.2.0"
     ],
     [
       "minimongo",
@@ -154,6 +154,6 @@
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.32",
+  "toolVersion": "meteor-tool@1.0.33",
   "format": "1.0"
 }
