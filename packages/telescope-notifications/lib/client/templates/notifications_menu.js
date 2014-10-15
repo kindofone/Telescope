@@ -3,10 +3,10 @@ Template[getTemplate('notificationsMenu')].helpers({
     return getTemplate('notificationItem');
   },
   notifications: function(){
-    return Notifications.find({userId: Meteor.userId(), read: false}, {sort: {timestamp: -1}});
+    return Herald.collection.find({userId: Meteor.userId(), read: false}, {sort: {timestamp: -1}});
   },
   hasNotifications: function () {
-    return !!Notifications.find({userId: Meteor.userId(), read: false}, {sort: {timestamp: -1}}).count();    
+    return !!Herald.collection.find({userId: Meteor.userId(), read: false}, {sort: {timestamp: -1}}).count();    
   },
   notification_count: function(){
     var notifications=Notifications.find({userId: Meteor.userId(), read: false}).fetch();
@@ -14,6 +14,7 @@ Template[getTemplate('notificationsMenu')].helpers({
   },
   notification_count_formatted: function(){
     var notifications=Notifications.find({userId: Meteor.userId(), read: false}).fetch();
+    var notifications=Herald.collection.find({userId: Meteor.userId(), read: false}).fetch();
     if(notifications.length==0){
       return i18n.t('No notifications');
     }else if(notifications.length==1){
@@ -23,7 +24,7 @@ Template[getTemplate('notificationsMenu')].helpers({
     }
   },
   notification_class: function(){
-    var notifications=Notifications.find({userId: Meteor.userId(), read: false}).fetch();
+    var notifications=Herald.collection.find({userId: Meteor.userId(), read: false}).fetch();
     if(notifications.length==0)
       return 'no-notifications';
   }

@@ -1,12 +1,12 @@
 {
   "dependencies": [
     [
-      "aldeed:simple-schema",
+      "application-configuration",
       "1.0.3"
     ],
     [
-      "application-configuration",
-      "1.0.3"
+      "autoupdate",
+      "1.1.1"
     ],
     [
       "base64",
@@ -53,6 +53,10 @@
       "1.0.4"
     ],
     [
+      "fastclick",
+      "1.0.0"
+    ],
+    [
       "follower-livedata",
       "1.0.2"
     ],
@@ -71,6 +75,10 @@
     [
       "htmljs",
       "1.0.2"
+    ],
+    [
+      "http",
+      "1.0.6"
     ],
     [
       "id-map",
@@ -101,6 +109,18 @@
       "1.0.1"
     ],
     [
+      "kestanous:herald",
+      "0.6.0"
+    ],
+    [
+      "kestanous:herald-email",
+      "0.2.1"
+    ],
+    [
+      "livedata",
+      "1.0.10"
+    ],
+    [
       "logging",
       "1.0.4"
     ],
@@ -109,12 +129,20 @@
       "1.1.2"
     ],
     [
+      "meteor-platform",
+      "1.1.1"
+    ],
+    [
       "minifiers",
       "1.1.1"
     ],
     [
       "minimongo",
       "1.0.4"
+    ],
+    [
+      "mobile-status-bar",
+      "1.0.0"
     ],
     [
       "mongo",
@@ -141,11 +169,19 @@
       "1.0.3"
     ],
     [
+      "reload",
+      "1.1.0"
+    ],
+    [
       "retry",
       "1.0.1"
     ],
     [
       "routepolicy",
+      "1.0.2"
+    ],
+    [
+      "session",
       "1.0.2"
     ],
     [
@@ -155,6 +191,10 @@
     [
       "spacebars-compiler",
       "1.0.3"
+    ],
+    [
+      "standard-app-packages",
+      "1.0.2"
     ],
     [
       "telescope-base",
@@ -187,6 +227,10 @@
     [
       "underscore",
       "1.0.1"
+    ],
+    [
+      "url",
+      "1.0.0"
     ],
     [
       "webapp",

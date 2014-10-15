@@ -37,6 +37,11 @@ sacha:spin@2.0.4
 sacha:juice
 chuangbo:marked@0.3.3
 percolatestudio:synced-cron@0.1.1
+npm-container
+matb33:collection-hooks
+djedi:sanitize-html
+rajit:bootstrap3-datepicker
+bengott:avatar
 
 # Telescope Packages
 
@@ -54,12 +59,6 @@ telescope-email
 telescope-update-prompt
 telescope-notifications
 telescope-kadira
-
-
-npm-container
-matb33:collection-hooks
-djedi:sanitize-html
-rajit:bootstrap3-datepicker
 telescope-update-prompt
 telescope-notifications
 telescope-kadira
@@ -71,3 +70,5 @@ splendido:accounts-templates-unstyled
 font-awesome
 telescope-theme-base
 telescope-theme-allthingsfront
+
+splendido:accounts-templates-unstyled
