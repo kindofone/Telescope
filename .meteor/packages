@@ -46,8 +46,6 @@ telescope-search
 telescope-lib
 telescope-rss
 telescope-api
-telescope-module-share
-telescope-theme-base
 telescope-daily
 telescope-newsletter
 telescope-module-embedly
@@ -70,6 +68,6 @@ telescope-kadira
 service-configuration
 accounts-ui
 splendido:accounts-templates-unstyled
-telescope-theme-allthingsfront
 font-awesome
-
+telescope-theme-base
+telescope-theme-allthingsfront
