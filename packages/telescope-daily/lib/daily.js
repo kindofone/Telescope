@@ -11,7 +11,6 @@ viewParameters.daily = function (terms) {
       }
     },
     options: {
-      sort: {createdAt: -1},
       limit: 0
     }
   };

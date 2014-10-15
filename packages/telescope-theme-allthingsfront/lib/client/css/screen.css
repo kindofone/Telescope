@@ -1,18 +1,18 @@
 /* line 1, ../scss/global/_shared.scss */
-.avatar, .header .user-menu, .post-author, .comment-list .comment .user-avatar, .comment-new .user-avatar {
+.avatar, .header .user-avatar, .post-author, .comment-list .comment .user-avatar, .comment-new .user-avatar {
   display: inline-block;
   width: 26px;
   height: 26px;
   overflow: hidden;
   border-radius: 50%;
-  border: 1px solid #ECECEC;
+  box-shadow: 0 0 0 1px rgba(136, 131, 114, 0.25);
 }
 /* line 9, ../scss/global/_shared.scss */
-.avatar:not(img):hover, .header .user-menu:not(img):hover, .post-author:not(img):hover, .comment-list .comment .user-avatar:not(img):hover, .comment-new .user-avatar:not(img):hover {
-  border-color: #fa4786;
+.avatar:not(img):hover, .header .user-avatar:not(img):hover, .post-author:not(img):hover, .comment-list .comment .user-avatar:not(img):hover, .comment-new .user-avatar:not(img):hover {
+  box-shadow: 0 0 0 1px #fa4786;
 }
 /* line 13, ../scss/global/_shared.scss */
-.avatar img, .header .user-menu img, .post-author img, .comment-list .comment .user-avatar img, .comment-new .user-avatar img {
+.avatar img, .header .user-avatar img, .post-author img, .comment-list .comment .user-avatar img, .comment-new .user-avatar img {
   width: 100%;
 }
 
@@ -45,35 +45,85 @@ a:hover {
 /* line 12, ../scss/modules/_header.scss */
 .header .nav > li {
   vertical-align: middle;
+  line-height: 70px;
 }
-/* line 16, ../scss/modules/_header.scss */
+/* line 17, ../scss/modules/_header.scss */
 .header a, .header a:link, .header a:visited {
   color: inherit;
 }
-/* line 19, ../scss/modules/_header.scss */
+/* line 20, ../scss/modules/_header.scss */
 .header a.button, .header a:link.button, .header a:visited.button {
   color: white;
 }
-/* line 24, ../scss/modules/_header.scss */
+/* line 25, ../scss/modules/_header.scss */
 .header .header_inner {
   max-width: 960px;
   margin: 0 auto;
 }
-/* line 29, ../scss/modules/_header.scss */
+/* line 30, ../scss/modules/_header.scss */
 .header .logo {
   padding: 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-/* line 32, ../scss/modules/_header.scss */
+/* line 36, ../scss/modules/_header.scss */
 .header .logo a {
   letter-spacing: -2px;
   font-weight: 300;
   color: #fa4786;
 }
+/* line 43, ../scss/modules/_header.scss */
+.header .user-avatar {
+  vertical-align: middle;
+}
+/* line 48, ../scss/modules/_header.scss */
+.header .notifications-badge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 12px;
+  color: #FFF;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 0 3px;
+  text-align: center;
+  transform: translateX(50%) translateY(-25%);
+  background: #FA4786;
+}
+/* line 65, ../scss/modules/_header.scss */
+.header .has-dropdown .dropdown-menu {
+  padding-top: 45px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* line 71, ../scss/modules/_header.scss */
+.header .has-dropdown .dropdown-menu ul {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background: #20211C;
+  box-shadow: 0 1px 0 0 #888372;
+}
+/* line 77, ../scss/modules/_header.scss */
+.header .has-dropdown .dropdown-menu ul li {
+  border-color: #272822;
+}
+/* line 80, ../scss/modules/_header.scss */
+.header .has-dropdown .dropdown-menu ul li a {
+  font-weight: 200;
+  color: #F9F9F5;
+}
+/* line 88, ../scss/modules/_header.scss */
+.header .has-dropdown .notifications-menu ul {
+  min-width: 320px;
+}
 
 /* line 1, ../scss/modules/_nav.scss */
 .secondary-nav {
   float: right;
-  padding: 15px;
   height: 100%;
 }
 
@@ -89,31 +139,40 @@ a:hover {
 .posts.list {
   clear: both;
 }
-
 /* line 12, ../scss/modules/_posts.scss */
+.posts.list .post:hover .post-author, .posts.list .post:hover .post-discuss {
+  opacity: 1;
+}
+/* line 17, ../scss/modules/_posts.scss */
+.posts.list .post-author, .posts.list .post-discuss {
+  opacity: 0.5;
+  transition: opacity 150ms;
+}
+
+/* line 23, ../scss/modules/_posts.scss */
 .post {
   padding: 15px 0;
   cursor: pointer;
   transition: opacity 1s, background 100ms;
 }
-/* line 17, ../scss/modules/_posts.scss */
+/* line 28, ../scss/modules/_posts.scss */
 .post:hover {
   background: rgba(79, 77, 66, 0.2);
 }
-/* line 20, ../scss/modules/_posts.scss */
+/* line 31, ../scss/modules/_posts.scss */
 .post:hover .post-author, .post:hover .post-discuss {
   opacity: 1;
 }
-/* line 25, ../scss/modules/_posts.scss */
+/* line 36, ../scss/modules/_posts.scss */
 .post:last-child {
   border-bottom: none;
 }
-/* line 29, ../scss/modules/_posts.scss */
+/* line 40, ../scss/modules/_posts.scss */
 .post .modules-group {
   vertical-align: top;
 }
 
-/* line 34, ../scss/modules/_posts.scss */
+/* line 45, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link {
   width: 48px;
   height: 48px;
@@ -126,35 +185,35 @@ a:hover {
   transition: background 150ms, box-shadow 150ms, color 150ms, font-size 150ms;
   box-shadow: 0 -1px 0 1px rgba(136, 131, 114, 0.25);
 }
-/* line 46, ../scss/modules/_posts.scss */
+/* line 57, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link.voted {
   color: #fa4786;
   box-shadow: none;
   border: none;
 }
-/* line 51, ../scss/modules/_posts.scss */
+/* line 62, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link.voted i {
   font-size: 14px;
 }
-/* line 56, ../scss/modules/_posts.scss */
+/* line 67, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link.not-voted:hover {
   box-shadow: 0 -1px 0 1px #fa4786;
 }
-/* line 60, ../scss/modules/_posts.scss */
+/* line 71, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link i {
   height: 14px;
   font-size: 22px;
 }
-/* line 65, ../scss/modules/_posts.scss */
+/* line 76, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link i, .post-upvote .upvote-link .score {
   display: block;
 }
-/* line 69, ../scss/modules/_posts.scss */
+/* line 80, ../scss/modules/_posts.scss */
 .post-upvote .upvote-link .all-center {
   line-height: 26px;
 }
 
-/* line 74, ../scss/modules/_posts.scss */
+/* line 85, ../scss/modules/_posts.scss */
 .all-center {
   position: absolute;
   top: 50%;
@@ -162,74 +221,74 @@ a:hover {
   transform: translateX(-50%) translateY(-50%);
 }
 
-/* line 81, ../scss/modules/_posts.scss */
+/* line 92, ../scss/modules/_posts.scss */
 .left-modules, .center-modules, .right-modules {
   margin-left: -4px;
   display: inline-block;
 }
 
-/* line 86, ../scss/modules/_posts.scss */
+/* line 97, ../scss/modules/_posts.scss */
 .left-modules, .right-modules {
   width: 100px;
 }
 
-/* line 90, ../scss/modules/_posts.scss */
+/* line 101, ../scss/modules/_posts.scss */
 .left-modules {
   margin-left: 0;
   text-align: center;
 }
 
-/* line 95, ../scss/modules/_posts.scss */
+/* line 106, ../scss/modules/_posts.scss */
 .right-modules {
   text-align: center;
 }
 
-/* line 99, ../scss/modules/_posts.scss */
+/* line 110, ../scss/modules/_posts.scss */
 .center-modules {
   width: calc(100% - 200px);
 }
 
-/* line 104, ../scss/modules/_posts.scss */
+/* line 115, ../scss/modules/_posts.scss */
 .single-post .post {
   cursor: auto;
   margin-top: 15px;
 }
-/* line 108, ../scss/modules/_posts.scss */
+/* line 119, ../scss/modules/_posts.scss */
 .single-post .post:hover {
   background: transparent;
 }
-/* line 111, ../scss/modules/_posts.scss */
+/* line 122, ../scss/modules/_posts.scss */
 .single-post .post .post-body {
   font-size: 18px;
 }
 
-/* line 117, ../scss/modules/_posts.scss */
+/* line 128, ../scss/modules/_posts.scss */
 .post-heading, .post-excerpt {
   line-height: 25px;
 }
 
-/* line 121, ../scss/modules/_posts.scss */
+/* line 132, ../scss/modules/_posts.scss */
 .post-title-link, .post-title, .post-domain {
   font-size: 22px !important;
   font-weight: 300 !important;
 }
 
-/* line 126, ../scss/modules/_posts.scss */
+/* line 137, ../scss/modules/_posts.scss */
 .post-title-link:hover .post-title {
   color: #fa4786;
 }
 
-/* line 130, ../scss/modules/_posts.scss */
+/* line 141, ../scss/modules/_posts.scss */
 .post-title {
   color: #b4e24a;
 }
 
-/* line 134, ../scss/modules/_posts.scss */
+/* line 145, ../scss/modules/_posts.scss */
 .post-domain {
   color: #888372;
 }
 
-/* line 138, ../scss/modules/_posts.scss */
+/* line 149, ../scss/modules/_posts.scss */
 .post-body {
   font-size: 15px;
   font-weight: 200;
@@ -237,30 +296,30 @@ a:hover {
   color: #f9f9f5;
 }
 
-/* line 145, ../scss/modules/_posts.scss */
+/* line 156, ../scss/modules/_posts.scss */
 .post-excerpt {
   font-size: 16px;
   font-weight: 200;
   color: #f9f9f5;
 }
 
-/* line 151, ../scss/modules/_posts.scss */
+/* line 162, ../scss/modules/_posts.scss */
 .post-meta {
   font-size: 14px;
   font-weight: 300;
 }
-/* line 155, ../scss/modules/_posts.scss */
+/* line 166, ../scss/modules/_posts.scss */
 .post-meta a {
   text-decoration: underline;
   color: inherit;
   font-weight: inherit;
 }
-/* line 161, ../scss/modules/_posts.scss */
+/* line 172, ../scss/modules/_posts.scss */
 .post-meta .post-meta-item {
   display: inline-block;
 }
 
-/* line 166, ../scss/modules/_posts.scss */
+/* line 177, ../scss/modules/_posts.scss */
 a.post-category {
   font-size: 14px;
   font-weight: 300;
@@ -270,54 +329,49 @@ a.post-category {
   border-radius: 3px;
 }
 
-/* line 175, ../scss/modules/_posts.scss */
-.post-author, .post-discuss {
-  opacity: 0.5;
-  transition: opacity 150ms;
-}
-
-/* line 186, ../scss/modules/_posts.scss */
+/* line 192, ../scss/modules/_posts.scss */
 .post-discuss:hover a, .post-discuss:hover i {
   color: #fa4786;
 }
-/* line 191, ../scss/modules/_posts.scss */
+/* line 197, ../scss/modules/_posts.scss */
 .post-discuss a, .post-discuss i {
   color: #CFCFCF;
   font-weight: 200;
 }
 
-/* line 197, ../scss/modules/_posts.scss */
+/* line 203, ../scss/modules/_posts.scss */
 .posts-day-heading {
   max-width: 960px;
   margin: 25px auto;
   font-weight: 200;
   text-align: left;
   color: inherit;
-  font-family: "futura-pt";
   text-transform: uppercase;
 }
-/* line 206, ../scss/modules/_posts.scss */
+/* line 211, ../scss/modules/_posts.scss */
 .posts-day-heading h2, .posts-day-heading h4 {
   display: inline-block;
 }
-/* line 210, ../scss/modules/_posts.scss */
+/* line 215, ../scss/modules/_posts.scss */
 .posts-day-heading h2 {
+  font-family: "futura-pt";
   font-size: 22px;
 }
-/* line 213, ../scss/modules/_posts.scss */
-.posts-day-heading h4 {
-  margin-left: 10px;
+/* line 219, ../scss/modules/_posts.scss */
+.posts-day-heading span {
+  font-family: "museo-sans";
+  margin-left: 5px;
   font-size: 14px;
 }
 
-/* line 219, ../scss/modules/_posts.scss */
+/* line 226, ../scss/modules/_posts.scss */
 .more-button {
   width: 960px;
   margin: 0 auto;
   background: transparent;
   text-align: center;
 }
-/* line 225, ../scss/modules/_posts.scss */
+/* line 232, ../scss/modules/_posts.scss */
 .more-button span, .more-button i {
   font-size: 18px;
   font-weight: 200;

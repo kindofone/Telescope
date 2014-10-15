@@ -9,9 +9,9 @@ addToSettingsSchema = [];
 
 
 // array containing nav items; initialize with views menu and admin menu
-primaryNav = ['viewsMenu', 'adminMenu'];
+primaryNav = ['userMenu', 'adminMenu', 'submitButton'];
 
-secondaryNav = ['search', 'submitButton', 'notificationsMenu', 'userMenu'];
+secondaryNav = ['search'];
 
 // array containing items in the admin menu
 adminNav = [];
@@ -77,6 +77,20 @@ viewParameters.digest = function (terms) {
     },
     options: {
       sort: {sticky: -1, baseScore: -1, limit: 0}
+    }
+  };
+}
+
+viewParameters.daily = function (terms) {
+  return {
+    find: {
+      postedAt: {
+        $gte: terms.after
+      }
+    },
+    options: {
+      sort: {createdAt: -1},
+      limit: 0
     }
   };
 }

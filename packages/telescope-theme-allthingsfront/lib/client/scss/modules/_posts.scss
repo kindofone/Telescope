@@ -7,6 +7,17 @@
 
 .posts.list {
     clear: both;
+
+    .post:hover {
+        .post-author, .post-discuss {
+            opacity: 1;
+        }
+    }
+
+    .post-author, .post-discuss {
+        opacity: 0.5;
+        transition: opacity 150ms;
+    }
 }
 
 .post {
@@ -172,11 +183,6 @@ a.post-category {
     border-radius: 3px;
 }
 
-.post-author, .post-discuss {
-    opacity: 0.5;
-    transition: opacity 150ms;
-}
-
 .post-author {
     @extend .avatar;
 }
@@ -200,7 +206,6 @@ a.post-category {
     font-weight: 200;
     text-align: left;
     color: inherit;
-    font-family: "futura-pt";
     text-transform: uppercase;
 
     h2, h4 {
@@ -208,10 +213,12 @@ a.post-category {
     }
 
     h2 {
+        font-family: "futura-pt";
         font-size: 22px;
     }
-    h4 {
-        margin-left: 10px;
+    span {
+        font-family: "museo-sans";
+        margin-left: 5px;
         font-size: 14px;
     }
 }

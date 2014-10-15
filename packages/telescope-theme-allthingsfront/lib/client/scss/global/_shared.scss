@@ -4,10 +4,10 @@
     height: 26px;
     overflow: hidden;
     border-radius: 50%;
-    border: 1px solid #ECECEC;
+    box-shadow: 0 0 0 1px rgba(136, 131, 114, 0.25);
 
     &:not(img):hover {
-        border-color: $keyword;
+        box-shadow: 0 0 0 1px $keyword;
     }
 
     img {
