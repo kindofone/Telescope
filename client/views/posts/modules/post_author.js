@@ -17,6 +17,6 @@ Template[getTemplate('postAuthor')].helpers({
     // note: we don't want the post to be re-rendered every time user properties change
     var user = Meteor.users.findOne(this.userId, {reactive: false});
     if(user)
-      return getAvatarUrl(user);
+      return Avatar.getUrl(user);
   }
 });

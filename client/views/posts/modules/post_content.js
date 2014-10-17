@@ -31,7 +31,7 @@ Template[getTemplate('postContent')].helpers({
     // THIS FUNCTION IS DEPRECATED -- package bengott:avatar is used instead.
     var author = Meteor.users.findOne(this.userId, {reactive: false});
     if(!!author)
-      return getAvatarUrl(author); // ALSO DEPRECATED
+      return Avatar.getUrl(author);
   },
   inactiveClass: function(){
     return (isAdmin(Meteor.user()) && this.inactive) ? i18n.t('inactive') : "";

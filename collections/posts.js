@@ -307,6 +307,7 @@ Meteor.methods({
     // TODO: make post_edit server-side?
   },
   approvePost: function(post){
+    console.log("approvePost");
     if(isAdmin(Meteor.user())){
       var now = new Date();
       Posts.update(post._id, {$set: {status: 2, postedAt: now}});

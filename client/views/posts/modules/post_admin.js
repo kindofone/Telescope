@@ -12,3 +12,14 @@ Template[getTemplate('postAdmin')].helpers({
     return canEdit(Meteor.user(), this);
   }
 });
+
+Template[getTemplate('postAdmin')].events({
+  'click .approve-link': function(e, instance){
+    Meteor.call('approvePost', this);
+    e.preventDefault();
+  },
+  'click .unapprove-link': function(e, instance){
+    Meteor.call('unapprovePost', this);
+    e.preventDefault();
+  }
+});

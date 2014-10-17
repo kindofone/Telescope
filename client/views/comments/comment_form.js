@@ -1,6 +1,9 @@
 Template[getTemplate('comment_form')].helpers({
   canComment: function(){
     return canComment(Meteor.user());
+  },
+  currentUserId: function(){
+    return Meteor.user()._id;
   }
 });
 

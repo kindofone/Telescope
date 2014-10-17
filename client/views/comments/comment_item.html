@@ -6,7 +6,7 @@
       {{else}}
       <div class="comment-content">
         <div class="comment-user-info">
-            <div class="user-avatar">{{>avatar userId=userId class=""}}</div>
+            <div class="user-avatar">{{>avatar userId=userId class="circle"}}</div>
             <div class="comment-actions {{#if upvoted}}upvoted{{else}}not-upvoted{{/if}} {{#if downvoted}}downvoted{{else}}not-downvoted{{/if}}">
               <a class="upvote" href="#">
                 <i class="fa fa-chevron-up"></i>
@@ -16,7 +16,6 @@
               </a>
             </div>
         </div>
-        <div class="user-avatar">{{>avatar userId=userId class="circle"}}</div>
         <div class="comment-main">
           <div class="comment-meta">
             <a class="comment-username" href="{{profileUrl}}">{{authorName}}</a>&nbsp;
@@ -35,16 +34,6 @@
                 • <span>{{full_date}}</span>
               {{/if}}
             </div>
-            <a class="comment-username" href="{{profileUrl}}">{{authorName}}</a>
-            <span class="comment-time">{{ago}},</span>
-            <span class="points">{{upvotes}}</span> <span class="unit">points </span>
-            <a href="/comments/{{_id}}" class="comment-permalink icon-link goto-comment">{{i18n "link"}}</a>
-            {{#if can_edit}}
-              | <a class="edit-link" href="/comments/{{_id}}/edit">{{i18n "Edit"}}</a>
-            {{/if}}
-            {{#if isAdmin}}
-              | <span>{{full_date}}</span>
-            {{/if}}
           </div>
         </div>
       </div>

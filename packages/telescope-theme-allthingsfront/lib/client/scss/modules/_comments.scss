@@ -35,6 +35,7 @@ a.comment-username {
         .comment-user-info {
             display: inline-block;
             padding: 0 15px;
+            text-align: center;
         }
 
         .user-avatar {
@@ -70,5 +71,14 @@ a.comment-username {
 
     .user-avatar {
         @extend .avatar;
+    }
+}
+
+.comment-actions {
+    &.upvoted a.upvote {
+        color: $keyword !important;
+    }
+    &.downvoted a.downvote {
+        color: $keyword !important;
     }
 }

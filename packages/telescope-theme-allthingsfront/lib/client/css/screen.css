@@ -419,33 +419,43 @@ a.comment-username {
 .comment-list .comment .comment-user-info {
   display: inline-block;
   padding: 0 15px;
+  text-align: center;
 }
-/* line 44, ../scss/modules/_comments.scss */
+/* line 45, ../scss/modules/_comments.scss */
 .comment-list .comment .comment-content + .comment-children > li {
   margin-top: 15px;
 }
 
-/* line 50, ../scss/modules/_comments.scss */
+/* line 51, ../scss/modules/_comments.scss */
 .comment-new {
   padding: 15px 0;
   border-top: 1px solid #4f4d42;
 }
-/* line 54, ../scss/modules/_comments.scss */
+/* line 55, ../scss/modules/_comments.scss */
 .comment-new .comment-user-info {
   display: inline-block;
   vertical-align: top;
   padding: 0 15px;
 }
-/* line 60, ../scss/modules/_comments.scss */
+/* line 61, ../scss/modules/_comments.scss */
 .comment-new .comment-form {
   display: inline-block;
   width: calc(100% - 32px - 30px);
   margin-left: -4px;
 }
-/* line 65, ../scss/modules/_comments.scss */
+/* line 66, ../scss/modules/_comments.scss */
 .comment-new .comment-form #editor > iframe {
   border: none;
   border-radius: 3px;
+}
+
+/* line 78, ../scss/modules/_comments.scss */
+.comment-actions.upvoted a.upvote {
+  color: #fa4786 !important;
+}
+/* line 81, ../scss/modules/_comments.scss */
+.comment-actions.downvoted a.downvote {
+  color: #fa4786 !important;
 }
 
 /* line 9, ../scss/screen.scss */

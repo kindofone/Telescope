@@ -196,7 +196,9 @@ commentAfterEditMethodCallbacks = []; // not used yet
 // ------------------------------ Dynamic Templates ------------------------------ //
 
 
-templates = {}
+templates = {
+    "emailWrapper": "emailWrapper"
+}
 
 getTemplate = function (name) {
   // if template has been overwritten, return this; else return template name
