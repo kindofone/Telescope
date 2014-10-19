@@ -41,3 +41,9 @@ Template[getTemplate('layout')].rendered = function(){
     Session.set('currentScroll', null);
   }
 };
+
+Template[getTemplate('layout')].events({
+    'click .overlay': function (event) {
+        Router.go('/');
+    }
+});

@@ -10,12 +10,12 @@
         {{#each heroModules}}
           {{> UI.dynamic template=getTemplate}}
         {{/each}}
-        {{> yield "main"}}
+        {{> yield }}
         {{> UI.dynamic template=footer}}
       </div>
       <div class="overlay hidden"></div>
       <div class="modal-pane">
-        {{> yield}}
+        {{> yield "modal-pane"}}
       </div>
     </div>
     {{{extraCode}}}
