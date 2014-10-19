@@ -9,3 +9,7 @@ body {
   font-family: "museo-sans", sans-serif;
   color: #f9f9f5;
 }
+
+[contenteditable=true]:empty:not(:focus):before {
+  content: attr(data-ph);
+}

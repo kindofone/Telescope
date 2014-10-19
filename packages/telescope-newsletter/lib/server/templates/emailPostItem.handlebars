@@ -1,34 +1,211 @@
-<div class="post-item">
-<br >
+<style type="text/css">
+.avatar, .post-author {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(136, 131, 114, 0.25);
+}
+.avatar:not(img):hover, .post-author:not(img):hover {
+  box-shadow: 0 0 0 1px #fa4786;
+}
+.avatar img, .post-author img {
+  width: 100%;
+}
 
-<span class="post-title">
-  {{#if thumbnailUrl}}
-    <img class="post-thumbnail" src="{{thumbnailUrl}}"/>&nbsp;
-  {{/if}}
+.post {
+  padding: 15px 0;
+  cursor: pointer;
+  transition: opacity 1s, background 100ms;
+  padding-left: 25px;
+}
+.post:hover {
+  background: rgba(79, 77, 66, 0.2);
+}
+.post:hover .post-author, .post:hover .post-discuss {
+  opacity: 1;
+}
+.post:last-child {
+  border-bottom: none;
+}
+.post .modules-group {
+  vertical-align: top;
+}
 
-  <a href="{{postLink}}" target="_blank">{{title}}</a>
-</span>
+.post-upvote .upvote-link {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(79, 77, 66, 0.2);
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  transition: background 150ms, box-shadow 150ms, color 150ms, font-size 150ms;
+  box-shadow: 0 -1px 0 1px rgba(136, 131, 114, 0.25);
+}
+.post-upvote .upvote-link.voted {
+  color: #fa4786;
+  box-shadow: none;
+  border: none;
+}
+.post-upvote .upvote-link.voted i {
+  font-size: 14px;
+}
+.post-upvote .upvote-link.not-voted:hover {
+  box-shadow: 0 -1px 0 1px #fa4786;
+}
+.post-upvote .upvote-link i {
+  height: 14px;
+  font-size: 22px;
+}
+.post-upvote .upvote-link i, .post-upvote .upvote-link .score {
+  display: block;
+}
+.post-upvote .upvote-link .all-center {
+  line-height: 26px;
+}
 
-<div class="post-meta">
-  {{#if domain}}
-    <a class="post-domain" href="">{{domain}}</a>
-    | 
-  {{/if}}
-  <span class="post-submitted">Submitted by <a href="{{profileUrl}}" class="comment-link" target="_blank">{{authorName}}</a></span>
-  <span class="post-date">on {{date}}</span>
-  |
-  <a href="{{postPageLink}}" class="comment-link" target="_blank">{{comments}} Comments</a>
-</div>
+.post-score {
+    font-size: 12px;
+    color: #fa4786;
+}
 
+.all-center {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translateX(-50%) translateY(-50%);
+}
 
-{{#if body}}
-  <div class="post-body-excerpt">
-    {{{body}}}
-    <a href="{{postPageLink}}" class="comment-link" target="_blank">Read more</a>
+.left-modules, .center-modules, .right-modules {
+  margin-left: -4px !important;
+  display: inline-block;
+}
+
+.left-modules, .right-modules {
+  width: 100px;
+}
+
+.left-modules {
+  margin-left: 0;
+  text-align: center;
+}
+
+.right-modules {
+  text-align: center;
+}
+
+.center-modules {
+  width: 80%;
+}
+
+.single-post .post {
+  cursor: auto;
+  margin-top: 15px;
+}
+.single-post .post:hover {
+  background: transparent;
+}
+.single-post .post .post-body {
+  font-size: 18px;
+}
+
+.post-heading, .post-excerpt {
+  line-height: 25px;
+}
+
+.post-title-link, .post-title, .post-domain {
+  font-size: 18px !important;
+  font-weight: 300 !important;
+}
+
+.post-title-link:hover .post-title {
+  color: #fa4786;
+}
+
+.post-title {
+  color: #b4e24a;
+}
+
+.post-domain {
+  color: #888372;
+}
+
+.post-body {
+  font-size: 15px;
+  font-weight: 200;
+  width: 100%;
+  color: #f9f9f5;
+}
+
+.post-excerpt {
+  font-size: 16px;
+  font-weight: 200;
+  color: #f9f9f5;
+}
+
+.post-meta {
+  font-size: 14px;
+  font-weight: 300;
+}
+.post-meta a {
+  text-decoration: underline;
+  color: inherit;
+  font-weight: inherit;
+}
+.post-meta .post-meta-item {
+  display: inline-block;
+}
+
+a.post-category {
+  font-size: 14px;
+  font-weight: 300;
+  background: rgba(79, 77, 66, 0.2);
+  text-decoration: none;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.post-discuss:hover a, .post-discuss:hover i {
+  color: #fa4786;
+}
+.post-discuss a, .post-discuss i {
+  color: #CFCFCF;
+  font-weight: 200;
+}
+
+</style>
+
+<div class="post" onclick="window.location.href='{{postPageLink}}'">
+  <div class="modules-group center-modules">
+    <div class="inner">
+      <div class="post-content center-center cell">
+        <div class="post-info">
+          <h3 class="post-heading">
+            <a href="{{postLink}}" class="post-title-link" target="_blank">
+              <span class="post-title">{{title}}</span>
+              <!--<span class="post-domain">{{domain}}</span>-->
+            </a>
+          </h3>
+          <div class="post-excerpt">
+            <div class="post-excerpt">{{{excerpt}}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-{{/if}}
-
-
-<br>
+  <div class="modules-group right-modules">
+    <div class="inner">
+      <div class="post-author right-right cell">
+        <a class="author-link" href="{{profileUrl}}" title="{{authorName}}"><img src="{{avatarUrl}}"></a>
+      </div>
+      <div class="post-discuss right-right cell">
+        <a class="discuss-link go-to-comments" href="{{postPageLink}}">
+          <span class="post-score">{{baseScore}} votes</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
-

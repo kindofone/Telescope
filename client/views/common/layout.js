@@ -11,6 +11,9 @@ Template[getTemplate('layout')].helpers({
   notifications: function () {
     return getTemplate('notifications');
   },
+  posts_list: function () {
+    return getTemplate('posts_list');
+  },
   footer: function () {
     return getTemplate('footer');
   },

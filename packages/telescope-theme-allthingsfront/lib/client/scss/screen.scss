@@ -1,10 +1,12 @@
 @import "includes/colors";
 @import "global/shared";
 @import "global/links";
+@import "global/forms";
 @import "modules/header";
 @import "modules/nav";
 @import "modules/posts";
 @import "modules/comments";
+@import "modules/modal_pane";
 
 body {
     background: #272822;
@@ -23,7 +25,7 @@ h1 {
 
 }
 
-input {
+input[type="text"], input[type=""] {
     font-family: "museo-sans", sans-serif;
     outline: none;
     -webkit-appearance: none;
@@ -39,9 +41,6 @@ input {
 }
 
 .search {
-    display: block;
-    margin: 10px 0;
-    float: right;
     position: relative;
 
     .search-field {

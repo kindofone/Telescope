@@ -1,4 +1,8 @@
-.secondary-nav {
-    float: right;
-    height: 100%;
+.primary-nav {
+    width: 100%;
+
+    & > li:last-child {
+        float: right;
+        margin-top: 17.5px;
+    }
 }

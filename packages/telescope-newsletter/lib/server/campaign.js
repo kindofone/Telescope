@@ -38,6 +38,7 @@ buildCampaign = function (postsArray) {
       postLink: getPostLink(post),
       profileUrl: getProfileUrl(postUser),
       postPageLink: getPostPageUrl(post),
+      avatarUrl: "http://www.gravatar.com/avatar/6b718251c4907d0da9b065fc6e0670d9?default=http%3A%2F%2Flocalhost%3A3000%2Fpackages%2Fbengott_avatar%2Fdefault.png&amp;size=200",
       date: moment(post.postedAt).format("MMMM D YYYY")
     });
 
@@ -53,7 +54,8 @@ buildCampaign = function (postsArray) {
   // 2. Wrap posts HTML in digest template
   var digestHTML = getEmailTemplate('emailDigest')({
     siteName: getSetting('title'),
-    date: moment().format("dddd, MMMM Do YYYY"),
+    dayName: moment().format("dddd"),
+    date: moment().format("MMMM Do YYYY"),
     content: postsHTML
   });
 

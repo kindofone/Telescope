@@ -1,48 +1,30 @@
 <style type="text/css">
-  .email-digest{
+  .posts-day-heading {
+    max-width: 960px;
+    margin: 0 auto 25px auto;
+    font-weight: 200;
+    text-align: left;
+    color: inherit;
+    text-transform: uppercase;
   }
-  .digest-date{
-    color: #999;
-    font-weight: normal;
-    font-size: 16px;
-  }
-  .post-item{
-    border-top: 1px solid #ddd;
-  }
-  .post-date{
-    font-size: 13px;
-    color: #999;
-  }
-  .post-title{
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  .post-thumbnail{
-  }
-  .post-meta{
-    font-size: 13px;
-    color: #999;
-    margin: 5px 0;
-  }
-  .post-meta a{
-    color: #333;
-  }  
-  .post-domain{
-    font-weight: bold;
-  }
-  .post-body-excerpt{
-    font-size: 14px;
-  }
-  .post-body-excerpt p{
-    margin: 0;
-  }
+    .posts-day-heading h2, .posts-day-heading h4 {
+      display: inline-block;
+    }
+    .posts-day-heading h2 {
+      font-size: 18px;
+      font-weight: 200;
+    }
+    .posts-day-heading span {
+      margin-left: 5px;
+      font-size: 14px;
+    }
 </style>
 
-<span class="heading">Recently on {{siteName}}</span>
-<span class="digest-date">– {{date}}</span>
-<br><br>
+<div class="posts-day-heading">
+    <h2 class="digest-day">{{dayName}}</h2>
+    <span class="digest-date">{{date}}</span>
+</div>
 
 <div class="email-digest">
   {{{content}}}
 </div>
-<br>

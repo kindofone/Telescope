@@ -642,6 +642,9 @@
     // Keep long lines from being longer than the editor
     this.editorIframeDocument.body.style.wordWrap = 'break-word';
 
+    // Placeholder data-attribute for the editor body
+    this.editorIframeDocument.body.setAttribute("data-ph", "Description");
+
     // FIXME figure out why it needs +2 px
     if (_isIE() > -1) {
       this.previewer.style.height = parseInt(_getStyle(this.previewer, 'height'), 10) + 2;

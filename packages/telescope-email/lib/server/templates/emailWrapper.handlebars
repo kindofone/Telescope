@@ -16,6 +16,14 @@
         table {border-spacing:0;}
         table td {border-collapse:collapse;}
         .yshortcuts a {border-bottom: none !important;}
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
+        }
 
 
         /* Constrain email width for small screens */
@@ -42,7 +50,6 @@
         }
         a{
           color: {{buttonColor}};
-          font-weight: bold;
           text-decoration: none;
         }
         .wrapper{
@@ -53,7 +60,6 @@
         }
         .heading-container{
           background: #20211C;
-          font-family: "museo-sans", "Helvetica", "arial", sans-serif;
           padding: 15px;
           text-align: center;
           border-radius: 3px 3px 0px 0px;
@@ -61,16 +67,16 @@
         .heading-container, .logo{
           text-align: center;
           color: #fa4786;
-          font-weight: bold;
-          font-size: 20px;          
+          font-size: 40px;
+          font-weight: 200;
+          font-family: "Futura LT";
         }
         .main-container{
           line-height: 1.7;
           background: #272822;
-          font-family: "museo-sans", "Helvetica", "arial", sans-serif;
           padding: 0 30px;
           font-size: 15px;
-          color: #555;
+          border-radius: 3px 3px 0 0;
         }
         .heading{
           font-weight: bold;
@@ -80,9 +86,7 @@
         }
         .footer-container{
           background: #272822;
-          font-family: "museo-sans", "Helvetica", "arial", sans-serif;
           padding: 30px;
-          color: #777;
           border-radius: 0px 0px 3px 3px;
           font-size: 13px;
         }
@@ -107,8 +111,7 @@
   <tr>
     <td class="wrapper" align="center" valign="top" bgcolor="#20211C" style="background-color: #20211C;">
 
-      <!-- 600px container (white background) -->
-      <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
+      <table border="0" width="600" cellpadding="0" cellspacing="0" class="container">
         <tr>
           <td class="heading-container">
             {{#if logoUrl}}
@@ -119,7 +122,7 @@
           </td>
         </tr>
         <tr>
-          <td class="main-container container-padding" bgcolor="#ffffff">
+          <td class="main-container container-padding">
             <br>
 
             {{{body}}}

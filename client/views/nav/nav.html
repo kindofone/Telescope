@@ -16,16 +16,6 @@
           </ul>
         {{/if}}
 
-        {{#if logo_url}}
-          <h1 class="logo logo-image header-module">
-            <a href="/">
-              <img src="{{logo_url}}" alt="{{site_title}}"/>
-            </a>
-          </h1>
-        {{else}}
-          <h1 class="logo header-module"><a href="/">{{site_title}}</a></h1>
-        {{/if}}
-
         {{#if hasSecondaryNav}}
           <ul class="nav secondary-nav desktop-nav {{dropdownClass}} header-module desktop-only">
             {{#each secondaryNav}}
@@ -34,6 +24,16 @@
               </li>
             {{/each}}
           </ul>
+        {{/if}}
+
+        {{#if logo_url}}
+          <h1 class="logo logo-image header-module">
+            <a href="/">
+              <img src="{{logo_url}}" alt="{{site_title}}"/>
+            </a>
+          </h1>
+        {{else}}
+          <h1 class="logo header-module"><a href="/">{{site_title}}</a></h1>
         {{/if}}
 
     </div>
